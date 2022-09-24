@@ -1,3 +1,5 @@
-node_modules
+node_modules/
+public/styles
 .env
-.env.example
+*.log
+*.sqlite3
