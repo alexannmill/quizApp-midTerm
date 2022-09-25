@@ -16,6 +16,7 @@ CREATE TABLE quizes (
   question2 VARCHAR(255) NOT NULL,
   question3 VARCHAR(255),
   question4 VARCHAR(255),
+  share_link VARCHAR(255)
 );
 
 CREATE TABLE userQuizes (
