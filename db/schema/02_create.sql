@@ -1,14 +1,15 @@
 DROP TABLE IF EXISTS questions CASCADE;
-DROP TABLE IF EXISTS quizes CASCADE;
+DROP TABLE IF EXISTS quizzes CASCADE;
 
 CREATE TABLE quizzes (
   id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(50),
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE NOT NULL,
-  short_url VARCHAR(6) REFERENCES questions(id) ON DELETE CASCADE NOT NULL,
-  question1 INTEGER REFERENCES questions(id) ON DELETE CASCADE,
-  question2 INTEGER REFERENCES questions(id) ON DELETE CASCADE,
-  question3 INTEGER REFERENCES questions(id) ON DELETE CASCADE,
-  question4 INTEGER REFERENCES questions(id) ON DELETE CASCADE
+  short_url VARCHAR(6),
+  question1 INTEGER,
+  question2 INTEGER,
+  question3 INTEGER,
+  question4 INTEGER
 );
 
 CREATE TABLE questions (
@@ -20,4 +21,3 @@ CREATE TABLE questions (
   answer3 VARCHAR(255),
   answer4 VARCHAR(255)
 );
-

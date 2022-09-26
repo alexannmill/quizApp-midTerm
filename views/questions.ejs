@@ -1,33 +1,59 @@
-<section class="questionContainer">
-  <form action="/routes/create.js" method="post">
-    <label>Question</label>
-    <textarea name="question" ></textarea>
-   </form>
-</section>
-<section id="answerContainer">
-  <form class="anwsertext" action="/routes/create.js" method="post">
-    <div>
-      <label>Correct Answer</label>
-      <textarea name="correct"></textarea>
-    </div>
-    <div>
-      <label>Incorrect Answer</label>
-      <textarea name="answer1"></textarea>
-    </div>
-    <div>
-      <label>Incorrect Answer</label>
-      <textarea name="answer3" ></textarea>
-    </div>
-    <div>
-      <label>Incorrect Answer</label>
-      <textarea name="answer2" ></textarea>
-    </div>
-    <div>
-      <label>Incorrect Answer</label>
-      <textarea name="answer4" ></textarea>
-    </div>
-    <button type="submit">Start/button</button>
-   </form>
-</section>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Create a Quiz!</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/create.css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <!-- <script defer src="/scripts/app.js"></script> -->
+  <script src="/routes/create.js"></script>
+  <script type="text/javascript" src="/routes/questions.js"></script>
+</head>
+<%- include('partials/_header.ejs') %>
+  <body>
+    <main id="main">
+      <section class="questionContainer">
+        <form action="/routes/create.js" method="post">
+          <label>Question</label>
+          <textarea name="question"></textarea>
+        </form>
+      </section>
+      <section id="answerContainer">
+        <form class="answers" action="/" method="post">
+          <div>
+            <label>Correct Answer</label>
+            <textarea name="correct"></textarea>
+          </div>
+          <div>
+            <label>Incorrect Answer</label>
+            <textarea name="answer1"></textarea>
+          </div>
+          <div>
+            <label>Incorrect Answer</label>
+            <textarea name="answer3"></textarea>
+          </div>
+          <div>
+            <label>Incorrect Answer</label>
+            <textarea name="answer2"></textarea>
+          </div>
+          <div>
+            <label>Incorrect Answer</label>
+            <textarea name="answer4"></textarea>
+          </div>
+          <button type="submit">Start/button</button>
+        </form>
+      </section>
+    </main>
+  </body>
+
 </html>
