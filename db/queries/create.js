@@ -25,6 +25,10 @@ const createQuiz = (name, shortURL) => {
   VALUES
   ($1, $2, $3, $4, $5)`
   ,[name, shortURL,null, null, null])
-  .then()
+  .then((result) => {
+    const quiz = result.rows
+    console.log('quiz:', quiz)
+  })
 }
 exports.createQuiz = createQuiz
+
