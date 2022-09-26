@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Create</title>
+  <title>Create a Quiz!</title>
 
   <meta charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -15,22 +15,21 @@
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
-  <script src="/quizApp-midTerm/routes/create.js"></script>
+  <script src="/routes/create.js"></script>
+
 </head>
-
+<%- include('partials/_header.ejs') %>
 <body>
-  <header> Place Holder
-    <nav> Nav Bar -home-login-userInfo </nav>
-  </header>
   <h1>Create a quiz!</h1>
+  <main id="main">
+    <section class="createContainer">
+      New quiz
+      <form class="quizName" action="/create" method="GET">
+        <textarea name="name" id="nameText" ></textarea>
+        <button type="submit" >Start/button</button>
+       </form>
+    </section>
+  </main>
 
-  <section>
-    New quiz
-    <form action="/routes/create.js" method="">
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button>Start/button>
-     </form>
-  </section>
 </body>
-
 </html>
