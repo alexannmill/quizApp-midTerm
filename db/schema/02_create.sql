@@ -20,3 +20,4 @@ CREATE TABLE questions (
   answer3 VARCHAR(255),
   answer4 VARCHAR(255)
 );
+
