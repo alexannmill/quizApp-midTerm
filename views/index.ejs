@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>Home Page</title>
+  <head>
+    <title>Home Page</title>
 
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/layout.css" />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/layout.css" />
+    <link rel="stylesheet" href="/styles/_header.css"/>
 
-  <script src="/vendor/jquery-3.0.0.js"></script>
-  <script defer src="/scripts/app.js"></script>
-</head>
+    <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/app.js"></script>
+  </head>
+  <header>
+    <%- include('partials/_header') %>
+  </header>
+  <body>
+    <main>
+       <h1>Quizzes of the Day</h1>
+      <section id="featured">
+        <div class="column">
+          <div class="featured-quizzes">
+            <div class="featured-large">
+              MAIN QUIZ
+            </div>
+            <div class="featured-medium">
+              <span>Medium Quiz1</span>
+              <span>Medium Quiz2</span>
+            </div>
+            <div class="featured-medium">
+              <span>Medium Quiz3</span>
+              <span>Medium Quiz4</span>
+            </div>
+            <div class="featured-medium">
+              <span>Medium Quiz5</span>
+              <span>Medium Quiz6</span>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-container" id="popular-section">
+            <h3>Most Popular</h3>
+            <ol class="column-list">
+              <li>Popular 1</li>
+              <li>Popular 2</li>
+              <li>Popular 3</li>
+              <li>Popular 4</li>
+              <li>Popular 5</li>
+            </ol>
+          </div>
+          <div class="column-container" id="for-you-section">
+            <h3>Made For You</h3>
+            <ul class="column-list">
+              <li>For You 2</li>
+              <li>For You 2</li>
+              <li>For You 3</li>
+              <li>For You 4</li>
+              <li>For You 5</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="main-section">
 
-<body>
-  <h1>Have fun! 🥔</h1>
-</body>
 
+
+      </section>
+
+    </main>
+  </body>
 </html>

@@ -1,21 +1,21 @@
-<header id="header">
-  <nav id="navbar" >
-    <a id="homebutton"> Quiz App/ Home</a>
-    <!-- if user login -->
-    <div class="log/reg" >
-      <form action=" " method="get">
-        <label  > Logged in as :  </label>
-        <button class="headerbutton">logout</button>
-      </form>
+<head>
+  <link rel="stylesheet" href="/styles/_header.css"/>
+</head>
+<header>
+  <nav class="navbar">
+    <a class="navbar-brand" href="/">Quizz App</a>
+    <div class="navbar-items" id="navbar-paths">
+      <a id="create-item" href="/create">Create</a>
+      <a id="results-item" href="/results">Results</a>
     </div>
-    <!-- else -->
-    <div class="log/reg">
-      <form action="" method="GET">
-        <!-- login -->
-      </form>
-      <form action="" method="GET">
-        <!-- register -->
-      </form>
-    </div>
+    <div class="navbar-items">
+     <!--logged-in-->
+     <form method="GET" action="">
+      <button name="logout" type="submit" class="btn-warn">Log-out</button>
+    </form>
+    <!-- logged-out-->
+    <a class="nav-item nav-link" href="!#">Register</a>
+    <a class="nav-item nav-link" href="!#">Login</a>
+      </div>
   </nav>
 </header>
