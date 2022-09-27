@@ -1,0 +1,30 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: auto;
+  border-style: solid;
+  border-width: .2em;
+  border-color: black;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#navbar-paths {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+
+}
+
+#create-item {
+  display: flex;
+
+}
+
+#results-item {
+  display: flex;
+
+}
+
