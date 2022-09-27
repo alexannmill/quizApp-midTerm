@@ -26,15 +26,26 @@ $(function () {
   $("#completeQuizCreate").submit(function(e) {
     e.preventDefault();
     const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
-    $.post(`/create/${quiz_id}/complete`,
+    $.get(`/create/${quiz_id}/complete`,
     function(quiz_id) {
-      quizComplete()
+      HTMLswapFinal(quiz_id)
     });
   });
+  $("#createComplete").submit(function(e) {
+    $.get(`/create/`)
+  })
+
 });
 //adding to data on submit and pulling up questions after name submission
-
-const quizComplete = () => {
-  $("#main").detach()
+const HTMLswapFinal = () => {
+  $("#creationQnA").detach()
+  $("#main").append($finalHTML)
 };
-
+//HTML for final create page
+const $finalHTML= `<section id="createComplete">
+<h1> Your Quiz is Complete!</h1>
+<a href="localhost:8080/quiz/<%=quiz_id%>">Here is the link to your quiz and share with friends</a>
+<form id="createAnother" action="/create" method="GET">
+<button type="submit">Create Another</button>
+</form>
+</section>`

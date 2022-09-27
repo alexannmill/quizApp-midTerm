@@ -84,14 +84,14 @@ exports.quizVisible = quizVisible;
 //     });
 // };
 
-const compilingQuestions = (id) => {
+const compilingQuestions = (quiz_id) => {
   return db
     .query(
       `
     SELECT *
     FROM questions
     WHERE quiz_id = $1 `,
-      [id]
+      [quiz_id]
     )
     .then((result) => {
       return quiz;

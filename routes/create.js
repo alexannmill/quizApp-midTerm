@@ -49,7 +49,7 @@ router.post("/:id", (req, res) => {
 });
 
 //Once all questions are complete compiling all together
-router.post("/:id/complete", (req, res) => {
+router.get("/:id/complete", (req, res) => {
   const quiz_id = req.params.id;
   db.quizVisible(quiz_id)
     res.status(200).send(quiz_id)
