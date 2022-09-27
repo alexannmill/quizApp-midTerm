@@ -16,16 +16,25 @@ $(function () {
     question.answer2 = $(this).find('textarea[name="answer2"]').val();
     question.answer3 = $(this).find('textarea[name="answer3"]').val();
     question.answer4 = $(this).find('textarea[name="answer4"]').val();
+    //post with vars
     $.post(`/create/${quiz_id}`, question, function (data, textStatus, jqXHR) {
       $("#questionform").trigger("reset");
-      console.log(data);
-      console.log(jqXHR);
     });
   });
+
+  //on submit for generate quiz
   $("#completeQuizCreate").submit(function(e) {
     e.preventDefault();
     const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
-    $.post(`/create/${quiz_id}/complete`, quiz_id, function (quiz_id) {});
+    $.post(`/create/${quiz_id}/complete`,
+    function(quiz_id) {
+      quizComplete()
+    });
   });
 });
 //adding to data on submit and pulling up questions after name submission
+
+const quizComplete = () => {
+  $("#main").detach()
+};
+

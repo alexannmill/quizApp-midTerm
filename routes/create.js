@@ -17,9 +17,10 @@ router.post("/", (req, res) => {
   }
   const name = req.body.name;
   const shortURL = db.generateRandomNumber();
-  db.createQuiz(name, shortURL).then((quiz) => {
+  db.createQuiz(name, shortURL)
+  .then((quiz) => {
     const id = quiz.id;
-    console.log(id);
+    console.log("id",id);
     res.redirect(`/create/${id}`);
   });
 });
@@ -34,12 +35,12 @@ router.get(`/:id`, (req, res) => {
 //adding questions to database
 router.post("/:id", (req, res) => {
   const quiz_id = req.params.id;
-  console.log(quiz_id);
+  console.log("quizID",quiz_id);
   console.log("req.body:", req.body);
   db.createQuestion(req.body, quiz_id)
     .then((question) => {
-      console.log("question:", question);
-      res.send(question);
+      console.log("then question:", question);
+      res.status(200).send(question);
     })
     .catch((err) => {
       res.status(500).send();
@@ -47,10 +48,15 @@ router.post("/:id", (req, res) => {
     });
 });
 
+//Once all questions are complete compiling all together
 router.post("/:id/complete", (req, res) => {
   const quiz_id = req.params.id;
-  db.finishQuiz(quiz_id);
-  res.render("results");
+  db.quizVisible(quiz_id)
+    res.status(200).send(quiz_id)
 });
 
+router.get("/:id/complete", (req, res) => {
+  const quiz_id = req.params.id;
+    res.render("results", quiz_id);
+});
 module.exports = router;

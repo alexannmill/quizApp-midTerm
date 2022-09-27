@@ -38,7 +38,7 @@ const createQuiz = (name, shortURL) => {
   return db
     .query(
       `INSERT INTO quizzes
-  (name, short_url, user_id, is_visable)
+  (name, short_url, user_id, is_visible)
   VALUES
   ($1, $2, $3, $4)
   RETURNING *`,
@@ -51,16 +51,49 @@ const createQuiz = (name, shortURL) => {
 };
 exports.createQuiz = createQuiz;
 
-const finishQuiz = (id) => {
+const quizVisible = (id) => {
   return db
     .query(
       `
   UPDATE quizzes
-  SET is_visable = true
+  SET is_visible = true
   WHERE id = $1
+  RETURNING *
  `,
       [id]
     )
-    .then(() => {});
+    .then((result) => {
+      const quiz_id = result.rows[0].id
+      return quiz_id
+    });
 };
-exports.finishQuiz = finishQuiz;
+exports.quizVisible = quizVisible;
+
+// const collectForReport = (id) => {
+//   return db
+//     .query(
+//       `
+//     SELECT *
+//     FROM quizzes
+//     WHERE id = $1 `,
+//       [id]
+//     )
+//     .then((result) => {
+//       const quizInfo = result.rows[0];
+//       return quizInfo;
+//     });
+// };
+
+const compilingQuestions = (id) => {
+  return db
+    .query(
+      `
+    SELECT *
+    FROM questions
+    WHERE quiz_id = $1 `,
+      [id]
+    )
+    .then((result) => {
+      return quiz;
+    });
+};
