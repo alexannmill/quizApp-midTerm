@@ -15,21 +15,17 @@
   <link rel="stylesheet" href="/styles/create.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
-  <!-- <script defer src="/scripts/app.js"></script> -->
-  <script src="/routes/create.js"></script>
-  <script type="text/javascript" src="/routes/questions.js"></script>
+  <script type="text/javascript" src="/scripts/questions.js"></script>
 </head>
 <%- include('partials/_header.ejs') %>
   <body>
     <main id="main">
+      <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
       <section class="questionContainer">
-        <form action="/routes/create.js" method="post">
           <label>Question</label>
           <textarea name="question"></textarea>
-        </form>
       </section>
       <section id="answerContainer">
-        <form class="answers" action="/" method="post">
           <div>
             <label>Correct Answer</label>
             <textarea name="correct"></textarea>
@@ -50,9 +46,12 @@
             <label>Incorrect Answer</label>
             <textarea name="answer4"></textarea>
           </div>
-          <button type="submit">Start/button</button>
-        </form>
-      </section>
+          <button type="submit">Next</button>
+        </section>
+      </form>
+      <form id="completeQuizCreate" data-quiz-id="<%=id%>"  action="/create/:id/complete" method="POST">
+        <button type="submit">Create Quiz</button>
+      </form>
     </main>
   </body>
 

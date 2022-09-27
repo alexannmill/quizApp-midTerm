@@ -1,51 +1,66 @@
-const db = require('../connection')
+const db = require("../connection");
 
 //generate shortURL link
 const generateRandomNumber = () => {
   return Math.random().toString(36).substring(2, 8);
 };
-exports.generateRandomNumber = generateRandomNumber
+exports.generateRandomNumber = generateRandomNumber;
 
 // all's need to be made before quiz (FK)
 const createQuestion = (question, quiz_id) => {
-  return db.query(`
-  INSERT INTO TABLE questions
+  return db
+    .query(
+      `
+  INSERT INTO questions
   (quiz_id, question, correct, answer1, answer2, answer3, answer4)
   VALUES
-  ($1, $2, $3, $4, $5, $6)`
-  ,[quiz_id, question.question, question.correct, question.answer1, question.answer2, question.answer3, question.answer4])
-  .then()
+  ($1, $2, $3, $4, $5, $6, $7)
+  RETURNING *`,
+      [
+        quiz_id,
+        question.question,
+        question.correct,
+        question.answer1,
+        question.answer2,
+        question.answer3,
+        question.answer4,
+      ]
+    )
+    .then((result) => {
+      const question = result.rows[0];
+      return question;
+    });
 };
-exports.createQuestion = createQuestion
+exports.createQuestion = createQuestion;
 
 //change user
 const createQuiz = (name, shortURL) => {
-  return db.query(`INSERT INTO quizzes
-  (name, short_url, user_id, question1, question2, question3)
+  return db
+    .query(
+      `INSERT INTO quizzes
+  (name, short_url, user_id, is_visable)
   VALUES
-  ($1, $2, $3, $4, $5, $6)`
-  ,[name, shortURL, 1, null, null, null])
-  .then((result) => {
-    const quiz = result.rows
-    console.log('quiz:', quiz)
-  })
-  .catch((err) => {
-    console.error(err)
-  })
-}
-exports.createQuiz = createQuiz
+  ($1, $2, $3, $4)
+  RETURNING *`,
+      [name, shortURL, 1, false]
+    )
+    .then((result) => {
+      const quiz = result.rows[0];
+      return quiz;
+    });
+};
+exports.createQuiz = createQuiz;
 
-const quizIdByURL = (shortURL) => {
-  return db.query (`
-  SELECT id
-  FROM quizzes
-  WHERE short_id = $1`
-  ,[shortURL])
-  .then((result) => {
-    const quiz_id = result.rows[0];
-  })
-  .catch((err) => {
-    console.error(err)
-  })
-}
-exports.quizIdByURL = quizIdByURL
+const finishQuiz = (id) => {
+  return db
+    .query(
+      `
+  UPDATE quizzes
+  SET is_visable = true
+  WHERE id = $1
+ `,
+      [id]
+    )
+    .then(() => {});
+};
+exports.finishQuiz = finishQuiz;
