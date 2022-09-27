@@ -26,8 +26,9 @@ $(document).ready(function() {
     let id = $('[data-id]').attr('data-id');
     let quiz = $('[quiz-id]').attr('quiz-id');
     console.log("quiz", quiz);
-    id=Number(id);
+    id = Number(id);
     id = JSON.parse(id);
+
     $.get(`/results/${quiz}/${id+1}`)
     .then(function(results) {
       if (results.length < 1) {
@@ -36,12 +37,8 @@ $(document).ready(function() {
         renderNextQuestion(results[0]);
         $('[data-id]').attr('data-id', Number(id+1));
       }
-    })
-    .catch(function(err) {
-      console.log(err);
-    })
-    .c
-  })
+    });
+  });
 })
 
 
