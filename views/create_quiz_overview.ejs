@@ -22,10 +22,32 @@
   <body>
     <main id="main">
       <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
-       <h1>Quiz Overview</h1>
-          </section>
+        <h1>Quiz Overview</h1>
       </form>
+      <section>
+
+        <div class="questionContainer">
+          <section id="question">
+            <label>Question:</label>
+            <h3>
+              <%=quesion %>
+            </h3>
+          </section>
+          <section id="answerContainer">
+          <label>Correct Answer:</label>
+          <h2> <%=correct%> </h2>
+          <label>Incorrect Answer:</label>
+          <h2> <%=answer1%> </h2>
+          <label>Incorrect Answer:</label>
+          <h2> <%=answer2%> </h2>
+          <label>Incorrect Answer:</label>
+          <h2> <%=answer3</h2>
+          <label>Incorrect Answer:</label>
+          <h2> <%=answer4</h2>
+        </div>
       </section>
+      </section>
+
     </main>
   </body>
 

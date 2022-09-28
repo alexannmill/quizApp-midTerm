@@ -72,7 +72,6 @@ const quizVisible = (id) => {
 };
 exports.quizVisible = quizVisible;
 
-
 const numOfQuestions = (quiz_id) => {
   return db
   .query(
@@ -95,8 +94,8 @@ const numOfQuestions = (quiz_id) => {
       .query(
         `
       SELECT *
-      FROM quizzes
-      WHERE id = $1 `,
+      FROM questions
+      WHERE quiz_id = $1 `,
         [id]
       )
       .then((result) => {
@@ -104,3 +103,4 @@ const numOfQuestions = (quiz_id) => {
         return quizInfo;
       });
   };
+exports.collectForReport = collectForReport

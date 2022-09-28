@@ -33,7 +33,6 @@ $(function () {
 
     //post with q vars
     $.post(`/create/${quiz_id}`, question, function (data) {
-
       const numOFq = data.numOFq;
       //for generate quiz button
       if (numOFq > 2) {
@@ -47,32 +46,36 @@ $(function () {
   $("#completeQuizCreate").submit(function (e) {
     e.preventDefault();
     const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
-
     $.post(`/create/${quiz_id}/complete`, function (quiz_id) {
-      //   HTMLswapFinal(quiz_id);
-      console.log("quiz_idq:", quiz_id);
-      //once again get request sends but page does not render, have to redirect using
-      window.location.href = `/create/${quiz_id}/complete`
+      console.log('quiz_id:', quiz_id)
+        HTMLswapFinal(quiz_id);
+      });
     });
+
+
+    //once again get request sends but page does not render, have to redirect using
+    // window.location.href = `/create/${quiz_id}/complete`
+
+    //GET redirect for creating a new quiz
+  $("#createComplete").submit(function (e) {
+    $.get(`/create/`);
   });
-});
 
-//GET redirect for creating a new quiz
-$("#createComplete").submit(function (e) {
-  $.get(`/create/`);
-});
+  //HTML for final create page
+  const $finalHTML = `<section id="createComplete">
+  <h1> Your Quiz is Complete!</h1>
+  <a href="localhost:8080/quiz/<%=quiz_id%>">Here is the link to your quiz and share with friends</a>
+  <form id="createAnother" action="/create" method="GET">
+  <button type="submit">Create Another</button>
+  </form>
+  </section>`;
 
-//adding to data on submit and pulling up questions after name submission
-const HTMLswapFinal = () => {
-  $("#creationQnA").detach();
-  $("completeQuizCreate").detach();
-  $("#main").append($finalHTML);
-};
-//HTML for final create page
-const $finalHTML = `<section id="createComplete">
-<h1> Your Quiz is Complete!</h1>
-<a href="localhost:8080/quiz/<%=quiz_id%>">Here is the link to your quiz and share with friends</a>
-<form id="createAnother" action="/create" method="GET">
-<button type="submit">Create Another</button>
-</form>
-</section>`;
+  // func for dropping qNa text form for final page
+  const HTMLswapFinal = () => {
+    $("#creationQnA").detach();
+    $("completeQuizCreate").detach();
+    $("#main").append($finalHTML);
+    $("#completeQuizCreate").detach();
+  };
+
+});

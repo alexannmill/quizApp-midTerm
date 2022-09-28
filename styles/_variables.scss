@@ -1,8 +1,9 @@
-@mixin flexcenter($direction) {
+@mixin flexcenter() {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 $font:
 $background: #4f88a8
 $orangeboarder: #fbc068

@@ -1,4 +1,7 @@
-@mixin flexcenter($direction) {
+html {
+  width: 100%;
+}
+@mixin flexcenter() {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +12,6 @@
   flex-direction: column;
   padding: 2em;
   margin-inline: 5em;
-  width: 80%;
   background:darkcyan;
   label{
     align-self: center;
@@ -32,7 +34,7 @@
     margin: 1em
   }
   textarea {
-    width: 150%;
+
   }
 }
 
@@ -48,4 +50,8 @@
   margin-top: 1em;
   background: greenyellow;
   border-radius: 3px;
+}
+
+#main {
+  @include flexcenter();
 }
