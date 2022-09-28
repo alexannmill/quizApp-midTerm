@@ -1,0 +1,88 @@
+body {
+  justify-content: flex-start;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  width: 100%;
+
+  h1 {
+    margin-left: 10px;
+  }
+
+  .header-right-side {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    border: 2px solid black;
+    padding: 4px;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .answers {
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    border: 2px black solid;
+  }
+
+  .answer-picked {
+    font-weight: bold;
+    background-color: rgb(35, 182, 35);
+  }
+
+  .top-row-answers {
+    display: flex;
+    border: 5px 0px;
+    padding: 10px;
+    gap: 10px;
+    justify-content: space-evenly;
+    width: 100%;
+
+    .answers {
+      padding: 10px 50px;
+      width: 100%;
+      word-break: break-word;
+
+      &:hover {
+        font-weight: bold;
+        background-color: rgb(35, 182, 35);
+      }
+    }
+  }
+  .bottom-row-answers {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+
+    .answers {
+      padding: 10px 50px;
+      width: 100%;
+      word-break: break-word;
+
+      &:hover {
+        font-weight: bold;
+        background-color: rgb(35, 182, 35);
+      }
+    }
+  }
+
+}
+
+
