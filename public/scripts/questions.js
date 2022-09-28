@@ -1,15 +1,13 @@
 // func for dropping name entry and appending questions
 $(function () {
-
   //hide generate qestuin button until 2 questions have been answered
-  $("#completeQuizCreate").hide()
+  $("#completeQuizCreate").hide();
 
   //sumbit for question form
   $("#questionform").submit(function (e) {
     e.preventDefault();
 
     const quiz_id = $("#questionform").attr("data-quiz-id");
-    //if q and 2 a empty error
 
     //vars from form
     const question = {};
@@ -32,11 +30,12 @@ $(function () {
         return;
       }
     }
+
     //post with q vars
     $.post(`/create/${quiz_id}`, question, function (data) {
-      const numOFq = data.numOFq
+      const numOFq = data.numOFq;
       //for generate quiz button
-      if(numOFq > 2){
+      if (numOFq > 2) {
         $("#completeQuizCreate").show();
       }
       $("#questionform").trigger("reset");
@@ -47,16 +46,20 @@ $(function () {
   $("#completeQuizCreate").submit(function (e) {
     e.preventDefault();
     const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
-    $.get(`/create/${quiz_id}/complete`, function (quiz_id) {
-      HTMLswapFinal(quiz_id);
+    $.post(`/create/${quiz_id}/complete`, function (quiz_id) {
+      //   HTMLswapFinal(quiz_id);
+      console.log("quiz_idq:", quiz_id);
+      //once again get request sends but page does not render, have to redirect using
+      window.location.href = `/create/${quiz_id}/complete`
     });
   });
-
-  //GET redirect for creating a new quiz
-  $("#createComplete").submit(function (e) {
-    $.get(`/create/`);
-  });
 });
+
+//GET redirect for creating a new quiz
+$("#createComplete").submit(function (e) {
+  $.get(`/create/`);
+});
+
 //adding to data on submit and pulling up questions after name submission
 const HTMLswapFinal = () => {
   $("#creationQnA").detach();

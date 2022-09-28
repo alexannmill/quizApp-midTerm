@@ -12,23 +12,23 @@ router.get("/", (req, res) => {
 
 //name entered redirect to questions form
 router.post("/", (req, res) => {
-  console.log('req.body:', req.body)
   const name = req.body.name;
-  console.log('name:', name)
   const shortURL = db.generateRandomNumber();
   db.createQuiz(name, shortURL)
   .then((quiz) => {
-    console.log('quiz:', quiz)
     const id = quiz.id;
     res.send({id})
-  });
+  })
+  .catch((err) => {
+    res.status(500).send();
+    console.log(err);
+  })
 });
 
 //questions form
 //GET /create/:id
 router.get(`/:id`, (req, res) => {
   const id = req.params.id;
-  console.log("test")
   res.render("questions", { id });
 });
 
@@ -40,12 +40,10 @@ router.post("/:id", (req, res) => {
       db.numOfQuestions(question.quiz_id)
       .then((numOfquestions) => {
         const numOFq = numOfquestions
-        // console.log('numOfQ:', numOfQ)
         const tempVars = {
           question, numOFq
         };
           res.status(200).send(tempVars);
-          console.log("tempVars:", tempVars);
       })
     })
     .catch((err) => {
@@ -55,14 +53,19 @@ router.post("/:id", (req, res) => {
 });
 
 //Once all questions are complete compiling all together
-router.get("/:id/complete", (req, res) => {
+router.post("/:id/complete", (req, res) => {
   const quiz_id = req.params.id;
   db.quizVisible(quiz_id)
-    res.status(200).send(quiz_id)
+  .then((quiz_id)=> {
+    console.log('quizid:', quiz_id)
+  })
+  res.status(200).send(quiz_id)
 });
 
+
 router.get("/:id/complete", (req, res) => {
-  const quiz_id = req.params.id;
-    res.render("results", quiz_id);
-});
+  const id = req.params.id;
+  res.render("create_quiz_overview", {id})
+})
+
 module.exports = router;

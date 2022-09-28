@@ -6,7 +6,6 @@ const generateRandomNumber = () => {
 };
 exports.generateRandomNumber = generateRandomNumber;
 
-
 // all's need to be made before quiz (FK)
 const createQuestion = (question, quiz_id) => {
   return db
@@ -73,35 +72,35 @@ const quizVisible = (id) => {
 };
 exports.quizVisible = quizVisible;
 
-// const collectForReport = (id) => {
-//   return db
-//     .query(
-//       `
-//     SELECT *
-//     FROM quizzes
-//     WHERE id = $1 `,
-//       [id]
-//     )
-//     .then((result) => {
-//       const quizInfo = result.rows[0];
-//       return quizInfo;
-//     });
-// };
 
 const numOfQuestions = (quiz_id) => {
   return db
-    .query(
-      `
+  .query(
+    `
     SELECT count(*) AS num_of_questions
     FROM questions
     WHERE quiz_id = $1
-     `,
-      [quiz_id]
+    `,
+    [quiz_id]
     )
     .then((result) => {
       const numOFquestions = result.rows[0].num_of_questions
-      console.log('numOFquestionsq:', numOFquestions)
       return numOFquestions;
     });
-};
-exports.numOfQuestions = numOfQuestions
+  };
+  exports.numOfQuestions = numOfQuestions
+
+  const collectForReport = (id) => {
+    return db
+      .query(
+        `
+      SELECT *
+      FROM quizzes
+      WHERE id = $1 `,
+        [id]
+      )
+      .then((result) => {
+        const quizInfo = result.rows[0];
+        return quizInfo;
+      });
+  };

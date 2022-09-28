@@ -1,10 +1,18 @@
 
-.questionContainer {
+.createContainer {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
-#answerContainer {
+.quizName {
   display: flex;
   flex-direction: column;
+  textarea {
+    margin: 1em;
+    margin-bottom: 0.5em;
+  }
+  button {
+    color: green;
+  }
 }

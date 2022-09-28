@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
-  <link rel="stylesheet" href="/styles/create.css" />
+  <link rel="stylesheet" href="/styles/questions.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script type="text/javascript" src="/scripts/questions.js"></script>
@@ -21,7 +21,7 @@
 
   <body>
     <main id="main">
-      <form id="completeQuizCreate" data-quiz-id="<%=id%>" action="/create/:id/complete" method="GET">
+      <form id="completeQuizCreate" data-quiz-id="<%=id%>" action="/create/:id/complete" method="POST">
         <button type="submit">Generate Quiz</button>
       </form>
       <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
