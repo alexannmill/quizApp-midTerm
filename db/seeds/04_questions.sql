@@ -338,13 +338,13 @@ VALUES (14, 'Who plays the character of Po in the Kung Fu Panda movies?', 'Jack 
 /* Quiz 15 - Film Medium 1 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'In what year was the first Transformers movie released?', 1986, 2007, 1986, 1984, 2009);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'Which movie of film director Stanley Kubrick is known to be an adaptation of a Stephen King novel?', 'The Shining', 'The Shining', '2001: A Space Odyssey', 'Eyes Wide Shut', 'Dr. Strangelove');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'What was another suggested name for, the 1985 film, Back to the Future?', 'Spaceman From Pluto', 'Hill Valley Time Travelers', 'The Lucky Man', 'Spaceman From Pluto', 'The Time Travelers');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'Who was the director of Scott Pilgrim vs. the World (2010)?', 'Edgar Wright', 'Phil Lord', 'Chris Miller', 'Seth Rogan', 'Edgar Wright');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
 VALUES (15, '', '', '', '', '', '');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
