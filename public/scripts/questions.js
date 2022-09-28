@@ -1,8 +1,8 @@
 // func for dropping name entry and appending questions
 $(function () {
-  console.log("connected to q scripts");
+
   //hide generate qestuin button until 2 questions have been answered
-  // $("#completeQuizCreate").hide()
+  $("#completeQuizCreate").hide()
 
   //sumbit for question form
   $("#questionform").submit(function (e) {
@@ -32,8 +32,13 @@ $(function () {
         return;
       }
     }
-    //post with vars
-    $.post(`/create/${quiz_id}`, question, function (data, textStatus, jqXHR) {
+    //post with q vars
+    $.post(`/create/${quiz_id}`, question, function (data) {
+      const numOFq = data.numOFq
+      //for generate quiz button
+      if(numOFq > 2){
+        $("#completeQuizCreate").show();
+      }
       $("#questionform").trigger("reset");
     });
   });

@@ -99,8 +99,8 @@ const numOfQuestions = (quiz_id) => {
       [quiz_id]
     )
     .then((result) => {
-      const numOFquestions = result.rows[0]
-      console.log('numOFquestions:', numOFquestions)
+      const numOFquestions = result.rows[0].num_of_questions
+      console.log('numOFquestionsq:', numOFquestions)
       return numOFquestions;
     });
 };

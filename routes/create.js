@@ -37,12 +37,16 @@ router.post("/:id", (req, res) => {
   const quiz_id = req.params.id;
   db.createQuestion(req.body, quiz_id)
     .then((question) => {
-      const numOfQ = db.numOfQuestions(question.quiz_id)
-      const tempVars = {
-         numOfQ, question
+      db.numOfQuestions(question.quiz_id)
+      .then((numOfquestions) => {
+        const numOFq = numOfquestions
+        // console.log('numOfQ:', numOfQ)
+        const tempVars = {
+          question, numOFq
         };
-      console.log("tempVars:", tempVars);
-      res.status(200).send(tempVars);
+          res.status(200).send(tempVars);
+          console.log("tempVars:", tempVars);
+      })
     })
     .catch((err) => {
       res.status(500).send();
