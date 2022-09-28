@@ -21,6 +21,9 @@
 
   <body>
     <main id="main">
+      <form id="completeQuizCreate" data-quiz-id="<%=id%>" action="/create/:id/complete" method="GET">
+        <button type="submit">Generate Quiz</button>
+      </form>
       <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
         <section id="creationQnA">
           <div class="questionContainer">
@@ -50,9 +53,6 @@
             </div>
             <button type="submit">Next</button>
           </section>
-      </form>
-      <form id="completeQuizCreate" data-quiz-id="<%=id%>" action="/create/:id/complete" method="GET">
-        <button type="submit">Generate Quiz</button>
       </form>
       </section>
     </main>

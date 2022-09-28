@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/styles/create.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
+  <script src="scripts/create_name.js"></script>
   <!-- <script defer src="/scripts/app.js"></script> -->
 </head>
 <%- include('partials/_header.ejs') %>
@@ -23,7 +24,7 @@
     <h1>Create a quiz!</h1>
     <section class="createContainer">
       New quiz
-      <form class="quizName" action="" method="POST">
+      <form class="quizName" action="/create" method="POST">
         <textarea name="name" id="nameText"></textarea>
         <button type="submit">Start/button</button>
       </form>

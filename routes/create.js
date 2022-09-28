@@ -12,16 +12,15 @@ router.get("/", (req, res) => {
 
 //name entered redirect to questions form
 router.post("/", (req, res) => {
-  if (!req.body.name) {
-    return res.status(403).send("Plz enter a name");
-  }
+  console.log('req.body:', req.body)
   const name = req.body.name;
+  console.log('name:', name)
   const shortURL = db.generateRandomNumber();
   db.createQuiz(name, shortURL)
   .then((quiz) => {
+    console.log('quiz:', quiz)
     const id = quiz.id;
-    console.log("id",id);
-    res.redirect(`/create/${id}`);
+    res.send({id})
   });
 });
 
@@ -29,18 +28,21 @@ router.post("/", (req, res) => {
 //GET /create/:id
 router.get(`/:id`, (req, res) => {
   const id = req.params.id;
+  console.log("test")
   res.render("questions", { id });
 });
 
 //adding questions to database
 router.post("/:id", (req, res) => {
   const quiz_id = req.params.id;
-  console.log("quizID",quiz_id);
-  console.log("req.body:", req.body);
   db.createQuestion(req.body, quiz_id)
     .then((question) => {
-      console.log("then question:", question);
-      res.status(200).send(question);
+      const numOfQ = db.numOfQuestions(question.quiz_id)
+      const tempVars = {
+         numOfQ, question
+        };
+      console.log("tempVars:", tempVars);
+      res.status(200).send(tempVars);
     })
     .catch((err) => {
       res.status(500).send();

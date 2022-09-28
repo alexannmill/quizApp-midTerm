@@ -6,6 +6,7 @@ const generateRandomNumber = () => {
 };
 exports.generateRandomNumber = generateRandomNumber;
 
+
 // all's need to be made before quiz (FK)
 const createQuestion = (question, quiz_id) => {
   return db
@@ -29,7 +30,10 @@ const createQuestion = (question, quiz_id) => {
     .then((result) => {
       const question = result.rows[0];
       return question;
-    });
+    })
+    .catch((err) =>{
+      console.log('err:', err)
+    })
 };
 exports.createQuestion = createQuestion;
 
@@ -84,16 +88,20 @@ exports.quizVisible = quizVisible;
 //     });
 // };
 
-const compilingQuestions = (quiz_id) => {
+const numOfQuestions = (quiz_id) => {
   return db
     .query(
       `
-    SELECT *
+    SELECT count(*) AS num_of_questions
     FROM questions
-    WHERE quiz_id = $1 `,
+    WHERE quiz_id = $1
+     `,
       [quiz_id]
     )
     .then((result) => {
-      return quiz;
+      const numOFquestions = result.rows[0]
+      console.log('numOFquestions:', numOFquestions)
+      return numOFquestions;
     });
 };
+exports.numOfQuestions = numOfQuestions
