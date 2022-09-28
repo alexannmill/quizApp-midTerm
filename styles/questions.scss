@@ -1,0 +1,57 @@
+html {
+  width: 100%;
+}
+@mixin flexcenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  margin-inline: 5em;
+  background:darkcyan;
+  label{
+    align-self: center;
+    padding: 1em;
+  }
+}
+
+#answerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  label {
+    padding: 1em;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  button {
+    margin: 1em
+  }
+  textarea {
+
+  }
+}
+
+#correct {
+  position: relative;
+  left: 0.3em;
+}
+
+#completeQuizCreate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  background: greenyellow;
+  border-radius: 3px;
+}
+
+#main {
+  @include flexcenter();
+}

@@ -29,7 +29,10 @@ const createQuestion = (question, quiz_id) => {
     .then((result) => {
       const question = result.rows[0];
       return question;
-    });
+    })
+    .catch((err) =>{
+      console.log('err:', err)
+    })
 };
 exports.createQuestion = createQuestion;
 
@@ -69,31 +72,35 @@ const quizVisible = (id) => {
 };
 exports.quizVisible = quizVisible;
 
-// const collectForReport = (id) => {
-//   return db
-//     .query(
-//       `
-//     SELECT *
-//     FROM quizzes
-//     WHERE id = $1 `,
-//       [id]
-//     )
-//     .then((result) => {
-//       const quizInfo = result.rows[0];
-//       return quizInfo;
-//     });
-// };
-
-const compilingQuestions = (id) => {
+const numOfQuestions = (quiz_id) => {
   return db
-    .query(
-      `
-    SELECT *
+  .query(
+    `
+    SELECT count(*) AS num_of_questions
     FROM questions
-    WHERE quiz_id = $1 `,
-      [id]
+    WHERE quiz_id = $1
+    `,
+    [quiz_id]
     )
     .then((result) => {
-      return quiz;
+      const numOFquestions = result.rows[0].num_of_questions
+      return numOFquestions;
     });
-};
+  };
+  exports.numOfQuestions = numOfQuestions
+
+  const collectForReport = (id) => {
+    return db
+      .query(
+        `
+      SELECT *
+      FROM questions
+      WHERE quiz_id = $1 `,
+        [id]
+      )
+      .then((result) => {
+        const quizInfo = result.rows[0];
+        return quizInfo;
+      });
+  };
+exports.collectForReport = collectForReport
