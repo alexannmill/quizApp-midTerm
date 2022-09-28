@@ -33,6 +33,7 @@ $(function () {
 
     //post with q vars
     $.post(`/create/${quiz_id}`, question, function (data) {
+
       const numOFq = data.numOFq;
       //for generate quiz button
       if (numOFq > 2) {
@@ -46,6 +47,7 @@ $(function () {
   $("#completeQuizCreate").submit(function (e) {
     e.preventDefault();
     const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
+
     $.post(`/create/${quiz_id}/complete`, function (quiz_id) {
       //   HTMLswapFinal(quiz_id);
       console.log("quiz_idq:", quiz_id);
