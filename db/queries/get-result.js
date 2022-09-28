@@ -14,6 +14,7 @@ FROM users
 JOIN results ON users.id = user_id
 WHERE user_id = $1 AND quiz_id = $2
 `;
+
 const values = [id, quiz];
 return pool.query(queryString, values)
   .then(res => {
@@ -23,15 +24,15 @@ return pool.query(queryString, values)
     console.log(err);
   });
 }
-const getResultByID = function(id, quiz) {
+
+const updateResult = function(user_id, quiz_id, percentage, grade) {
   const queryString = `
-  SELECT name, grade, result, quiz_id, results.id as id
-  FROM users
-  JOIN results ON users.id = user_id
-  WHERE results.id = $1 AND quiz_id = $2
+  UPDATE results
+  SET grade = $1, result = $2
+  WHERE user_id = $3 AND quiz_id = $4
   `;
-  const values = [id, quiz];
-return pool.query(queryString, values)
+  const values = [grade, percentage, user_id, quiz_id];
+  return pool.query(queryString, values)
   .then(res => {
     return (res.rows);
   })
@@ -42,7 +43,7 @@ return pool.query(queryString, values)
 
 const getQuizByID = function(quiz) {
   const queryString = `
-  SELECT name, grade, result, quiz_id, results.id as id
+  SELECT quiz_id, question, correct, answer1, answer2, answer3, answer4
   FROM questions
   JOIN quizzes ON quizzes.id = quiz_id
   WHERE quiz_id = $1
@@ -58,9 +59,8 @@ return pool.query(queryString, values)
 }
 
 
-
 module.exports = {
   getResults,
-  getResultByID,
-  getQuizByID
+  getQuizByID,
+  updateResult
 }

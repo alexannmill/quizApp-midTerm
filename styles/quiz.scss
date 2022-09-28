@@ -33,7 +33,9 @@ header {
   flex-direction: column;
   width: 100%;
 
-  h4 {
+  .answers {
+    display: flex;
+    justify-content: space-between;
     font-weight: lighter;
     border: 2px black solid;
   }
@@ -51,10 +53,8 @@ header {
     justify-content: space-evenly;
     width: 100%;
 
-    h4 {
-      display: flex;
+    .answers {
       padding: 10px 50px;
-      justify-content: flex-start;
       width: 100%;
       word-break: break-word;
 
@@ -71,10 +71,8 @@ header {
     padding: 10px;
     width: 100%;
 
-    h4 {
-      border: 2px black solid;
+    .answers {
       padding: 10px 50px;
-      align-self: flex-start;
       width: 100%;
       word-break: break-word;
 

@@ -16,8 +16,9 @@
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
-  <script defer src="/scripts/answer-click.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/scripts/next-question.js"></script>
 </head>
 
 <body>
@@ -25,19 +26,28 @@
   <%- include('./partials/_header.ejs') %>
 
   <!-- Content -->
-  <div class="content">
+  <div class="content" quiz-id="<%= quiz_id %>">
+    <h5><%= question %></h5>
     <div class="top-row-answers">
-      <h4 class="answers">A</h4>
-      <h4 class="answers">B</h4>
+      <div class="answers">
+        <h4>A: <%=answer1 %></h4>
+      </div>
+      <div class="answers">
+        <h4>B: <%=answer2 %></h4>
+      </div>
     </div>
     <div class="bottom-row-answers">
-      <h4 class="answers">C</h4>
-      <h4 class="answers">D</h4>
+      <div class="answers">
+        <h4>C: <%=answer3 %></h4>
+      </div>
+      <div class="answers">
+        <h4>D: <%=answer4 %></h4>
+      </div>
     </div>
   </div>
 
   <h1>quiz pog</h1>
-  <button>Next</button>
+  <button class="next">Next</button>
 </body>
 
 </html>
