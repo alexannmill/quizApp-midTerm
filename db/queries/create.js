@@ -14,9 +14,8 @@ const quizVSuser = (id) => {
       [id]
     )
     .then((result) => {
-      const user_id = result.rows[0];
-      console.log("user_id:", user_id);
-      return user_id;
+      const user = result.rows[0];
+      return user;
     });
 };
 exports.quizVSuser = quizVSuser;
