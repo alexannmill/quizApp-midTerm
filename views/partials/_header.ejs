@@ -9,13 +9,18 @@
       <a id="results-item" href="/results">Results</a>
     </div>
     <div class="navbar-items">
-     <!--logged-in-->
-     <form method="GET" action="">
-      <button name="logout" type="submit" class="btn-warn">Log-out</button>
-    </form>
-    <!-- logged-out-->
-    <a class="nav-item nav-link" href="!#">Register</a>
-    <a class="nav-item nav-link" href="!#">Login</a>
-      </div>
+      <!--logged-in-->
+      <% if (userID) { %>
+        <form method="POST" action="/logout">
+          <button name="logout" type="submit" class="btn-warn">Log-out</button>
+        </form>
+      <% } else { %>
+        <!-- logged-out-->
+        <form method="POST" action="/login">
+          <input name="name" placeholder="Enter name">
+          <button name="login" type="submit" class="btn-warn">Login</button>
+        </form>
+      <% } %>
+    </div>
   </nav>
 </header>

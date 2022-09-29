@@ -1,5 +1,8 @@
 body {
-  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -28,8 +31,19 @@ header {
   }
 }
 
+.error {
+  display: flex;
+  margin-top: 22px;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border: red solid 2px;
+  width: 70%;
+}
+
 .content {
   display: flex;
+  align-items: center;
   flex-direction: column;
   width: 100%;
 
