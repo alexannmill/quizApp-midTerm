@@ -1,6 +1,5 @@
 /* Quiz 1 - Science & Nature  Easy 1 Subject */
 
-
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
 VALUES (1, 'Which Apollo mission was the first one to land on the Moon?', 'Apollo 11', 'Apollo 9', 'Apollo 13', 'Apollo 11', 'Apollo 9');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
@@ -46,6 +45,8 @@ INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, an
 VALUES (2, 'What is the hottest planet in the Solar System?', 'Venus', 'Venus', 'Mars', 'Mercury', 'Jupiter');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
 VALUES (2, 'How many chromosomes are in your body cells?', 23, 25, 23, 19, 22);
+
+
 
 /* Quiz 3 - Science & Nature Medium 1 Subject */
 
