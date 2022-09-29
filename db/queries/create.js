@@ -6,6 +6,22 @@ const generateRandomNumber = () => {
 };
 exports.generateRandomNumber = generateRandomNumber;
 
+const quizVSuser = (id) => {
+  return db
+    .query(
+      `SELECT user_id
+    FROM quizzes
+    WHERE id = $1`,
+      [id]
+    )
+    .then((result) => {
+      const user_id = result.rows[0];
+      console.log("user_id:", user_id);
+      return user_id;
+    });
+};
+exports.quizVSuser = quizVSuser;
+
 // all's need to be made before quiz (FK)
 const createQuestion = (question, quiz_id) => {
   return db
@@ -30,14 +46,14 @@ const createQuestion = (question, quiz_id) => {
       const question = result.rows[0];
       return question;
     })
-    .catch((err) =>{
-      console.log('err:', err)
-    })
+    .catch((err) => {
+      console.log("err:", err);
+    });
 };
 exports.createQuestion = createQuestion;
 
 //change user
-const createQuiz = (name, shortURL) => {
+const createQuiz = (name, shortURL, userID) => {
   return db
     .query(
       `INSERT INTO quizzes
@@ -45,7 +61,7 @@ const createQuiz = (name, shortURL) => {
   VALUES
   ($1, $2, $3, $4)
   RETURNING *`,
-      [name, shortURL, 1, false]
+      [name, shortURL, userID, false]
     )
     .then((result) => {
       const quiz = result.rows[0];
@@ -66,41 +82,44 @@ const quizVisible = (id) => {
       [id]
     )
     .then((result) => {
-      const quiz_id = result.rows[0].id
-      return quiz_id
+      const quiz_id = result.rows[0].id;
+      return quiz_id;
     });
 };
 exports.quizVisible = quizVisible;
 
 const numOfQuestions = (quiz_id) => {
   return db
-  .query(
-    `
+    .query(
+      `
     SELECT count(*) AS num_of_questions
     FROM questions
     WHERE quiz_id = $1
     `,
-    [quiz_id]
+      [quiz_id]
     )
     .then((result) => {
-      const numOFquestions = result.rows[0].num_of_questions
+      const numOFquestions = result.rows[0].num_of_questions;
       return numOFquestions;
     });
-  };
-  exports.numOfQuestions = numOfQuestions
+};
+exports.numOfQuestions = numOfQuestions;
 
-  const collectForReport = (id) => {
-    return db
-      .query(
-        `
-      SELECT *
+const collectForReport = (id) => {
+  return db
+    .query(
+      `
+      SELECT quiz_id, question, correct, answer1, answer2, answer3, answer4
       FROM questions
-      WHERE quiz_id = $1 `,
-        [id]
-      )
-      .then((result) => {
-        const quizInfo = result.rows[0];
-        return quizInfo;
-      });
-  };
-exports.collectForReport = collectForReport
+      JOIN quizzes ON quizzes.id = quiz_id
+      WHERE quiz_id = $1
+      `,
+      [id]
+
+    )
+    .then((result) => {
+      const quizData = result.rows;
+      return quizData;
+    });
+};
+exports.collectForReport = collectForReport;
