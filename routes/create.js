@@ -19,7 +19,7 @@ router.post("/", (req, res) => {
   const userID = req.session.user_id;
   const name = req.body.name;
   const shortURL = db.generateRandomNumber();
-  db.createQuiz(name, shortURL, 1)
+  db.createQuiz(name, shortURL, userID)
     .then((quiz) => {
       const id = quiz.id;
       res.send({ id });
@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
 
 //questions form
 //GET /create/:id
-router.get(`/:id`, (req, res) => {
+router.get("/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
   const userID = req.session.user_id;
@@ -71,21 +71,25 @@ router.post("/:id", (req, res) => {
 //Once all questions are complete
 router.post("/:id/public", (req, res) => {
   const quiz_id = req.params.id;
-  const user_id = db.quizVSuser(quiz_id)
   const userID = req.session.user_id
-  if (!user || user_id !== user){
-    res.status(400).send(`Unable to assess quiz.    <a href="/">Back Home</a>`)
-  }
-  db.quizVisible(quiz_id).then((quiz_id) => {
-    console.log("quizid:", quiz_id);
+  console.log(quiz_id);
+  db.quizVSuser(quiz_id)
+  .then(function(results) {
+    console.log(results.user_id);
+    if (!userID || results.user_id !== userID){
+      res.status(400).send(`Unable to assess quiz.    <a href="/">Back Home</a>`)
+    }
+    db.quizVisible(quiz_id).then((quiz_id) => {
+      console.log("quizid:", quiz_id);
+    });
+    res.render("quiz", {quiz_id});
   });
-  res.render("quiz", {quiz_id});
+
 });
 
 //GET overview of created quiz
 router.get("/:id/complete", (req, res) => {
   const id = req.params.id;
-  console.log('id:', id)
   const user_id = db.quizVSuser(quiz_id)
   const user = req.session.user_id
   if (!user_id || user_id !== user){

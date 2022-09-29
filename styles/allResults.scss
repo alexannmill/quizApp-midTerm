@@ -9,18 +9,22 @@ body {
 }
 
 table {
+  table-layout: auto;
   width: 90%;
   border-collapse: separate;
   border-spacing: 0em 1em;
-  border-radius: 6px;
-  overflow:hidden
 }
 
+thead {
+
+}
 
 tbody {
 
   tr{
-    @include textarea();
+    text-align: center;
+    @include textglow($blue);
+    @include borderglow($blue);
   }
 
 }
