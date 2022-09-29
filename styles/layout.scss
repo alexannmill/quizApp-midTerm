@@ -2,9 +2,13 @@
 @import "./_variables.scss";
 
 body {
-  // background-image: $background;
-  color:white
+  background-image: $background;
+  color: white;
+
 }
+
+
+/* Featured Section */
 
 #featured {
   display: flex;
@@ -24,6 +28,20 @@ body {
   flex-direction: column;
 
 }
+
+.column-right {
+  display: flex;
+  padding-left: 1em;
+}
+
+.column-container {
+  border: solid 0.1em black;
+  margin-bottom: 4em;
+}
+.column-container li {
+  padding-bottom: .4em;
+}
+
 
 .featured-large {
   display: flex;
@@ -46,22 +64,174 @@ body {
   margin-bottom: 2em;
 }
 
-.featured-medium span {
+
+
+
+.featured-medium span, .feature-title {
   display: flex;
-  border: solid 0.1em black;
-  padding-top: 0.88em;
-  padding-bottom: 0.88em;
+  top: 0px;
+  position: relative;
+  max-width: 30vw;
+  background-image: linear-gradient(
+    to top,
+    #0d1d3570 0%,
+    #f970b7,
+    #c653ff 100%
+  );
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, .3);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(2.15);
+  }
 }
 
-.column-right {
+
+
+
+
+/* Quizzes by Category Section + CSS for manipulating "Cards" */
+
+
+
+
+.quizzes {
   display: flex;
-  padding-left: 1em;
+  justify-content: space-evenly;
 }
 
-.column-container {
-  border: solid 0.1em black;
-  margin-bottom: 4em;
+
+
+.quizzes span{
+  display: flex;
+  top: 0px;
+  position: relative;
+  max-width: 30vw;
+  color: black;
+  background-image: linear-gradient(
+    to top,
+    #0d1d3570 0%,
+    #f970b7,
+    #c653ff 100%
+  );
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, .3);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(2.15);
+  }
 }
-.column-container li {
-  padding-bottom: .4em;
+
+
+
+
+
+
+
+/*
+.card2 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 30vw;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(2.15);
+  }
 }
+*/
+/*
+
+  <a class="card2" href="#">
+    <h3>This is option 2</h3>
+    <p class="small">Card description with lots of great facts and interesting details.</p>
+  </a>
+
+  */
