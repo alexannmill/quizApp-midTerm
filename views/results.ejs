@@ -16,22 +16,20 @@
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
-  <script src="/scripts/next-question.js"></script>
 </head>
 
 <body>
   <%- include('./partials/_header.ejs') %>
-  <div class="questions-container" data-id="<%= results[0].id %>" quiz-id="<%= results[0].quiz_id %>">
+  <div class="results-container">
     <div class="page-top">
-      <h2 value="0">user: <%= results[0].name %></h2>
-      <h2>test name: <%= results[0].quiz_name %></h2>
-    </div>
-    <div class="page-bottom">
       <h2>Grade: <%= results[0].grade %></h2>
       <h2>Results: <%= results[0].result %>%</h2>
     </div>
+    <div class="page-bottom">
+      <h5>User: <%= results[0].name %></h5>
+      <h5>Quiz Name: <%= results[0].quiz_name %></h5>
+    </div>
   </div>
-  <button class="next">Next</button>
 
 </body>
 
