@@ -2,6 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const database = require('../db/queries/users-data.js');
 
+// LOGS USERS IN OR REGISTERS USER DEPENDING ON BUTTON PRESSED
 router.post('/', (req, res) => {
   const name = req.body.name.trim();
   let logOrReg = req.body.login;
@@ -9,7 +10,7 @@ router.post('/', (req, res) => {
     database.getUsers(name)
     .then (function(results) {
       if(results.length === 0) {
-        return res.status(400).send({message: "This user does not exist!"});
+        return res.status(400).send(`This user does not exist!   <a href="/">Back Home</a>`);
       } else {
         const user = results[0].id;
         req.session.user_id = user;
@@ -27,7 +28,7 @@ router.post('/', (req, res) => {
             res.redirect('/');
           });
       } else {
-        return res.status(400).send({message: "This user already exists!"});
+        return res.status(400).send(`This user already exists!   <a href="/">Back Home</a>`);
       }
     });
   }

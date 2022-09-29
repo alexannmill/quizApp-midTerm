@@ -23,7 +23,25 @@ return pool.query(queryString, values)
   .catch(err => {
     console.log(err);
   });
-}
+};
+
+const getAllResults = function (id) {
+  const queryString = `
+SELECT name, grade, result, quiz_name
+FROM users
+JOIN results ON users.id = user_id
+WHERE user_id = $1
+`;
+
+const values = [id];
+return pool.query(queryString, values)
+  .then(res => {
+    return (res.rows);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+};
 
 const updateResult = function(user_id, quiz_id, percentage, grade) {
   const queryString = `
@@ -39,7 +57,7 @@ const updateResult = function(user_id, quiz_id, percentage, grade) {
   .catch(err => {
     console.log(err);
   });
-}
+};
 
 const getQuizByID = function(quiz) {
   const queryString = `
@@ -56,11 +74,12 @@ return pool.query(queryString, values)
   .catch(err => {
     console.log(err);
   });
-}
+};
 
 
 module.exports = {
   getResults,
   getQuizByID,
-  updateResult
+  updateResult,
+  getAllResults
 }

@@ -6,6 +6,20 @@ const generateRandomNumber = () => {
 };
 exports.generateRandomNumber = generateRandomNumber;
 
+const quizVSuser = (id) => {
+  return db. query (`
+    SELECT user_id
+    FROM quizzes
+    WHERE id = $1 , [id]
+  `).then ((result) =>{
+    const user_id = result.rows[0];
+    console.log(user_id);
+    return user_id;
+  })
+};
+exports.quizVSuser = quizVSuser;
+
+
 // all's need to be made before quiz (FK)
 const createQuestion = (question, quiz_id) => {
   return db

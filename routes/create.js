@@ -7,7 +7,11 @@ const db = require("../db/queries/create");
 //page for making quiz
 //GET /create/
 router.get("/", (req, res) => {
-  res.render("create");
+  const userID = req.session.user_id
+  if (!userID){
+    res.status(400).send(`Please login to make a quiz.    <a href="/">Back Home</a>`)
+  }
+  res.render("create", {userID});
 });
 
 //name entered redirect to questions form
@@ -29,7 +33,13 @@ router.post("/", (req, res) => {
 //GET /create/:id
 router.get(`/:id`, (req, res) => {
   const id = req.params.id;
-  res.render("questions", { id });
+  const user_id = db.quizVSuser(id);
+  const userID = req.session.user_id;
+  console.log(userID);
+  if (!userID || user_id !== userID){
+    res.status(400).send(`Unable to assess quiz.    <a class="navbar-brand" href="/">Back Home</a>`);
+  }
+  res.render("questions", { id, userID });
 });
 
 //adding questions to database

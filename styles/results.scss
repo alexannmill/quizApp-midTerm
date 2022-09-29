@@ -10,7 +10,7 @@ body {
 }
 
 .page-top {
-  margin-top: 150px;
+  margin-top: 100px;
   display: flex;
   font-size: 1.5em;
   flex-direction: row-reverse;
@@ -18,10 +18,21 @@ body {
   justify-content: space-around;
 }
 
+.gif{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
 .page-bottom {
   align-self: flex-end;
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin-top: 150px;
+  margin-top: 25px;
 }
