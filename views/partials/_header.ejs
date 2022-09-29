@@ -14,8 +14,8 @@
       <a id="results-item" href="/results">Results</a>
     </div>
     <div class="logReg">
-      <!-- logged-out -->
-
+    <!-- logged-out -->
+    <% if (userID) { %>
       <form method="POST" action="/logout">
         <button name="logout" type="submit" class="logout">Log-out</button>
       </form>

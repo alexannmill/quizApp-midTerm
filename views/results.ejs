@@ -25,6 +25,20 @@
       <h2>Grade: <%= results[0].grade %></h2>
       <h2>Results: <%= results[0].result %>%</h2>
     </div>
+    <div class="gif">
+      <% if (results[0].grade === "A") { %>
+        <img src="https://i.gifer.com/origin/a7/a779b6b2fa0eb7cb40c0ca87d398d96d_w200.webp">
+      <% } else if (results[0].grade === "B") { %>
+        <img src="https://i.gifer.com/origin/c9/c91879d18c2401559f750c7a7aaeb56a_w200.webp">
+      <% } else if (results[0].grade === "C") { %>
+        <img src="https://i.gifer.com/origin/0f/0f125a1a2fe2f1f64a7d112e9a9a4306_w200.webp">
+      <% } else if (results[0].grade === "D"){ %>
+        <img src="https://i.gifer.com/origin/44/44b2370187910e3d039a99c8cb2a94d7_w200.webp">
+      <% } else { %>
+        <img src="https://i.gifer.com/origin/bc/bcc1d7689ce64c8c612a8560af199be1_w200.webp">
+      <% } %>
+
+    </div>
     <div class="page-bottom">
       <h5>User: <%= results[0].name %></h5>
       <h5>Quiz Name: <%= results[0].quiz_name %></h5>

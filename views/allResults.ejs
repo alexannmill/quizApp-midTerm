@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Results</title>
+
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/allResults.css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+</head>
+
+<body>
+  <%- include('partials/_header.ejs') %>
+  <% if (results.length === 0) { %>
+    <div>
+      <h1>No Results :(</h1>
+    </div>
+  <% } else { %>
+  <div>
+    <h1>User: <%= results[0].name %></h1>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Quiz Name</th>
+        <th scope="col">Percentage</th>
+        <th scope="col">Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i = 0; i < results.length; i++) { %>
+        <tr>
+          <td><%= results[i].quiz_name %></td>
+          <td><%= results[i].result %>%</td>
+          <td><%= results[i].grade %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  <% } %>
+</body>
+
+</html>

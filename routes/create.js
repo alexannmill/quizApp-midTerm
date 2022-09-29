@@ -7,11 +7,11 @@ const db = require("../db/queries/create");
 //page for making quiz
 //GET /create/
 router.get("/", (req, res) => {
-  // const userID = req.session.user_id;
-  // if (!user){
-  //   res.status(400).send(`Please login to make a quiz.    <a href="/">Back Home</a>`);
-  // }
-  res.render("create", {  });
+  const userID = req.session.user_id
+  if (!userID){
+    res.status(400).send(`Please login to make a quiz.    <a href="/">Back Home</a>`)
+  }
+  res.render("create", {userID});
 });
 
 //name entered redirect to questions form
@@ -34,14 +34,12 @@ router.post("/", (req, res) => {
 //GET /create/:id
 router.get(`/:id`, (req, res) => {
   const id = req.params.id;
-  const userID = db.quizVSuser(id);
-  // .then((id) => {
-  //   console.log('userID:', userID);
-  //   const user = req.session.user_id;
-  //   if (!user_id || user_id !== user) {
-  //     res.status(400).send(`Unable to assess quiz.    <a href="/">Back Home</a>`);
-  //   }
-  // })
+  const user_id = db.quizVSuser(id);
+  const userID = req.session.user_id;
+  console.log(userID);
+  if (!userID || user_id !== userID){
+    res.status(400).send(`Unable to assess quiz.    <a class="navbar-brand" href="/">Back Home</a>`);
+  }
   res.render("questions", { id, userID });
 });
 

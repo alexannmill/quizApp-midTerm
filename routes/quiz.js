@@ -2,7 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const database = require('../db/queries/get-result');
 
-// renders a page with the given quiz from database
+// RENDERS A PAGE WITH THE GIVEN QUIZ DATA
 router.get('/:id', (req, res) => {
   const quiz_id = req.params.id;
   const userID = req.session.user_id;
@@ -10,13 +10,13 @@ router.get('/:id', (req, res) => {
   .then(function(results) {
     console.log(results);
     if (results.length === 0) {
-      return res.status(400).send({message: "Quiz does not exist :("});
+      return res.status(400).send(`This result does not exist :(   <a href="/">Back Home</a>`);
     }
     res.render('quiz', {results:results[0], userID});
   });
 });
 
-// RENDERS quiz data  as a JSON
+// RENDERS QUIZ DATA AS A JSON
 router.get('/data/:id', (req, res) => {
   const quiz_id = req.params.id;
   database.getQuizByID(quiz_id)
