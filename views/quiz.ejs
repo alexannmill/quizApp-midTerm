@@ -25,29 +25,36 @@
   <!-- Header -->
   <%- include('./partials/_header.ejs') %>
 
+  <!--Error Message-->
+  <div class="error">
+    <h3>Ayyy woah pick an answer pls</h3>
+  </div>
+
   <!-- Content -->
-  <div class="content" quiz-id="<%= quiz_id %>">
-    <h5><%= question %></h5>
+  <% if (userID) { %>
+  <div class="content" quiz-id="<%= results.quiz_id %>" user-id="<%= userID %>">
+    <h2><%= results.question %></h2>
     <div class="top-row-answers">
       <div class="answers">
-        <h4>A: <%=answer1 %></h4>
+        <h4>A: <%= results.answer1 %></h4>
       </div>
       <div class="answers">
-        <h4>B: <%=answer2 %></h4>
+        <h4>B: <%= results.answer2 %></h4>
       </div>
     </div>
     <div class="bottom-row-answers">
       <div class="answers">
-        <h4>C: <%=answer3 %></h4>
+        <h4>C: <%= results.answer3 %></h4>
       </div>
       <div class="answers">
-        <h4>D: <%=answer4 %></h4>
+        <h4>D: <%= results.answer4 %></h4>
       </div>
     </div>
   </div>
-
-  <h1>quiz pog</h1>
   <button class="next">Next</button>
+  <% } else { %>
+    <h1>Please login to do the quiz!</h1>
+  <% } %>
 </body>
 
 </html>

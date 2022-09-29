@@ -9,7 +9,7 @@ const pool = new Pool({
 
 const getResults = function (id, quiz) {
   const queryString = `
-SELECT name, grade, result, quiz_id, results.id as id
+SELECT name, grade, result, quiz_id, results.id as id, quiz_name
 FROM users
 JOIN results ON users.id = user_id
 WHERE user_id = $1 AND quiz_id = $2
@@ -43,7 +43,7 @@ const updateResult = function(user_id, quiz_id, percentage, grade) {
 
 const getQuizByID = function(quiz) {
   const queryString = `
-  SELECT quiz_id, question, correct, answer1, answer2, answer3, answer4
+  SELECT quiz_id, question, correct, answer1, answer2, answer3, answer4, name
   FROM questions
   JOIN quizzes ON quizzes.id = quiz_id
   WHERE quiz_id = $1

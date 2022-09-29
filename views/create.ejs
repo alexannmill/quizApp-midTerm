@@ -13,35 +13,33 @@
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/create.css" />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Righteous&family=Stalinist+One&display=swap"
+    rel="stylesheet">
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script src="scripts/create_name.js"></script>
 </head>
 <%- include('partials/_header.ejs') %>
 
-<body>
-  <header> Place Holder
-    <nav> Nav Bar -home-login-userInfo </nav>
-  </header>
-  <h1>Create a quiz!</h1>
-  <section>
-    New quiz
-    <form action="/routes/create.js" method="">
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button>Start/button>
-     </form>
+  <section class="createContainer">
+    <h1>Create a Quiz!</h1>
+    <div>
+      <p>Instructions:</p>
+      <ul>
+        <li>Every quiz must have a name.</li>
+        <li>You must have the question, correct <br> answer and one other answer.</li>
+        <li>Every quiz must have at least 3 questions.</li>
+      </ul>
+    </div>
+    <h3>Enter a Quiz Name : </h3>
+    <form class="quizName" action="/create" method="POST">
+      <textarea class="form-control form-control-lg" name="name" id="nameText"></textarea>
+      <button class="btn btn-info" type="submit">Start</button>
+    </form>
   </section>
-</body>
-  <body>
-
-    <section class="createContainer">
-    <h1>Create a quiz!</h1>
-      <p>Enter a Quiz Name : </p>
-      <form class="quizName" action="/create" method="POST">
-        <textarea name="name" id="nameText"></textarea>
-        <button type="submit">Start</button>
-      </form>
-    </section>
   </body>
 
 </html>

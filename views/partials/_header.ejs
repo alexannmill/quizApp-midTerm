@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" href="/styles/_header.css"/>
+  <link rel="stylesheet" href="/styles/_header.css" />
 </head>
 <header>
   <nav class="navbar">
@@ -8,14 +8,20 @@
       <a id="create-item" href="/create">Create</a>
       <a id="results-item" href="/results">Results</a>
     </div>
-    <div class="navbar-items">
-     <!--logged-in-->
-     <form method="GET" action="">
-      <button name="logout" type="submit" class="btn-warn">Log-out</button>
-    </form>
-    <!-- logged-out-->
-    <a class="nav-item nav-link" href="!#">Register</a>
-    <a class="nav-item nav-link" href="!#">Login</a>
-      </div>
+    <div class="logReg">
+      <!-- logged-out -->
+      <!-- will need div -->
+      <!-- <form method="GET" action="">
+      <button name="logout" type="submit" class="logout">Log-out</button>
+    </form> -->
+      <!--logged-in-->
+      <form method="GET" action="">
+        <textarea name="username">  </textarea>
+        <div class="buttons">
+          <button name="login" type="submit" class="login">Login</button>
+          <button name="register" type="submit" class="register">Register</button>
+        </div>
+      </form>
+    </div>
   </nav>
 </header>
