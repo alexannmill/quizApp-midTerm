@@ -5,6 +5,7 @@ CREATE TABLE results (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   quiz_id INTEGER REFERENCES quizzes(id) ON DELETE CASCADE,
+  name VARCHAR(255),
   result SMALLINT,
   grade VARCHAR(1)
 );

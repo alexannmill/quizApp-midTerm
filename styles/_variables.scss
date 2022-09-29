@@ -1,18 +1,30 @@
+
+$font:'Oxygen', sans-serif;
+$logo:'Stalinist One', cursive;
+$background: url(https://www.cameronsworld.net/img/content/20/bg.png);
+$pink:  #ff5dc3;
+$purple:  #cd68ff;
+$blue:  #9afffd;
+$green: #70ff46;
+
+@mixin textarea() {
+  margin-bottom: 0.5em;
+  resize: none;
+  background-color: #7dfffd;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+}
+
 @mixin flexcenter() {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-$font:
-$background: #4f88a8
-$orangeboarder: #fbc068
-$cardbackground :#fff9e4
-$lightblue: #96e3ee
-$pink: #ff86af
-$yellow: #ffef60
-$brown: #977366
-$green: #74d178
-$orange: #faa048
-$goldyellow: #e0bd50
-
+  @mixin button() {
+  font-weight: 400;
+  color: black ;
+  background-color:$purple;
+  border-radius: 5px;
+}
