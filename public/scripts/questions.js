@@ -83,7 +83,7 @@ $(function () {
       e.preventDefault();
       const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
       console.log('quiz_id:', quiz_id)
-      $.get(`/create/${quiz_id}/complete`, function (id, quizData) {
+      $.get(`/create/${quiz_id}/complete`, function (id, quiz_Data) {
         const qid= id
         console.log('qid:', qid)
         //once again get request sends but page does not render, have to redirect using

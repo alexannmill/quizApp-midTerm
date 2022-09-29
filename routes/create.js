@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 
 //name entered redirect to questions form
 router.post("/", (req, res) => {
-  // const userID = req.session.user_id;
+  const userID = req.session.user_id;
   const name = req.body.name;
   const shortURL = db.generateRandomNumber();
   db.createQuiz(name, shortURL, 1)
@@ -67,11 +67,11 @@ router.post("/:id", (req, res) => {
 //Once all questions are complete
 router.post("/:id/public", (req, res) => {
   const quiz_id = req.params.id;
-  // const user_id = db.quizVSuser(quiz_id)
-  // const userID = req.session.user_id
-  // if (!user || user_id !== user){
-  //   res.status(400).send(`Unable to assess quiz.    <a `Unable to assess quiz.    <a href="/">Back Home</a>`)
-  // }
+  const user_id = db.quizVSuser(quiz_id)
+  const userID = req.session.user_id
+  if (!user || user_id !== user){
+    res.status(400).send(`Unable to assess quiz.    <a href="/">Back Home</a>`)
+  }
   db.quizVisible(quiz_id).then((quiz_id) => {
     console.log("quizid:", quiz_id);
   });
@@ -82,11 +82,11 @@ router.post("/:id/public", (req, res) => {
 router.get("/:id/complete", (req, res) => {
   const id = req.params.id;
   console.log('id:', id)
-  // const user_id = db.quizVSuser(quiz_id)
-  // const user = req.session.user_id
-  // if (!user_id || user_id !== user){
-  //   res.status(400).send(`Unable to assess quiz.    <a class="navbar-brand" href="/">Back Home</a>`)
-  // }
+  const user_id = db.quizVSuser(quiz_id)
+  const user = req.session.user_id
+  if (!user_id || user_id !== user){
+    res.status(400).send(`Unable to assess quiz.    <a class="navbar-brand" href="/">Back Home</a>`)
+  }
   db.collectForReport(id)
   .then((quizData) => {
     // const quiz_Data = quizData
