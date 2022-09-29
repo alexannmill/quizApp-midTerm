@@ -1,13 +1,5 @@
-// const db = require("../connection");
-const { Pool } = require('pg');
+const db = require("../connection");
 
-const db = new Pool({
-  user: 'vagrant',
-  password: 'labber',
-  host: 'localhost',
-  database: 'midterm'
-});
-//generate shortURL link
 const generateRandomNumber = () => {
   return Math.random().toString(36).substring(2, 8);
 };

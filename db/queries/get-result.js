@@ -1,12 +1,7 @@
-const { Pool } = require('pg');
+const db = require("../connection");
 
-const pool = new Pool({
-  user: 'vagrant',
-  password: 'labber',
-  host: 'localhost',
-  database: 'midterm'
-});
 
+// GETS THE RESULT OF A SPECIFIC QUIZ FROM A USER
 const getResults = function (id, quiz) {
   const queryString = `
 SELECT name, grade, result, quiz_id, results.id as id, quiz_name
@@ -16,7 +11,7 @@ WHERE user_id = $1 AND quiz_id = $2
 `;
 
 const values = [id, quiz];
-return pool.query(queryString, values)
+return db.query(queryString, values)
   .then(res => {
     return (res.rows);
   })
@@ -25,6 +20,7 @@ return pool.query(queryString, values)
   });
 };
 
+// GETS ALL RECENT QUIZ RESULTS FROM A USER
 const getAllResults = function (id) {
   const queryString = `
 SELECT name, grade, result, quiz_name
@@ -34,7 +30,7 @@ WHERE user_id = $1
 `;
 
 const values = [id];
-return pool.query(queryString, values)
+return db.query(queryString, values)
   .then(res => {
     return (res.rows);
   })
@@ -43,6 +39,7 @@ return pool.query(queryString, values)
   });
 };
 
+// UPDATES THE RESULT OF A SPECIFIC QUIZ DONE BY A USER
 const updateResult = function(user_id, quiz_id, percentage, grade) {
   const queryString = `
   UPDATE results
@@ -50,7 +47,7 @@ const updateResult = function(user_id, quiz_id, percentage, grade) {
   WHERE user_id = $3 AND quiz_id = $4
   `;
   const values = [grade, percentage, user_id, quiz_id];
-  return pool.query(queryString, values)
+  return db.query(queryString, values)
   .then(res => {
     return (res.rows);
   })
@@ -59,6 +56,7 @@ const updateResult = function(user_id, quiz_id, percentage, grade) {
   });
 };
 
+// GETS THE DATA OF A SPECIFIC QUIZ
 const getQuizByID = function(quiz) {
   const queryString = `
   SELECT quiz_id, question, correct, answer1, answer2, answer3, answer4, name
@@ -67,7 +65,7 @@ const getQuizByID = function(quiz) {
   WHERE quiz_id = $1
   `;
   const values = [quiz];
-return pool.query(queryString, values)
+return db.query(queryString, values)
   .then(res => {
     return (res.rows);
   })

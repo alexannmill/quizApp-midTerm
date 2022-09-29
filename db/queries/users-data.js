@@ -1,24 +1,19 @@
-const { Pool } = require('pg');
+const db = require("../connection");
 
-const pool = new Pool({
-  user: 'vagrant',
-  password: 'labber',
-  host: 'localhost',
-  database: 'midterm'
-});
-
+// INSERTS USER INTO DATABASE
 const insertUsers = function(name) {
   const queryString = `
   INSERT INTO users(name) VALUES ($1)
   RETURNING *
   `;
   const values = [name];
-  return pool.query(queryString, values)
+  return db.query(queryString, values)
   .then(function(results) {
     return results;
   });
 }
 
+// FINDS THE USER FROM THE DATABASE
 const getUsers = function(user) {
   const queryString = `
   SELECT id
@@ -26,7 +21,7 @@ const getUsers = function(user) {
   WHERE name = $1
   `;
   const values = [user];
-  return pool.query(queryString, values)
+  return db.query(queryString, values)
   .then(function(results) {
     return results.rows;
   });
