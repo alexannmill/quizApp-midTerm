@@ -1,13 +1,13 @@
 @import "./_variables.scss";
 
-body{
+body {
   background-image: $background;
 }
 
 #main {
   @include flexcenter();
   // flex-direction: column;
-  width: 100vw
+  width: 100vw;
 }
 
 .questionContainer {
@@ -21,7 +21,7 @@ body{
     @include textarea();
     width: 20em;
   }
-  label{
+  label {
     align-self: center;
     padding: 1em;
     font-size: large;
@@ -71,3 +71,21 @@ body{
   }
 }
 
+#createComplete {
+  @include flexcenter;
+  flex-direction: column;
+  h1 {
+    color: $blue;
+    margin: 1em;
+  }
+  div {
+    display: flex;
+    flex-direction: row
+  }
+  .completeButton {
+    @include button();
+    width: 12em;
+    margin: 2em;
+    padding: 0.3em;
+  }
+}

@@ -1,6 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 const database = require('../db/queries/users-data.js');
+// const db = require("../connection");
 
 // LOGS USERS IN OR REGISTERS USER DEPENDING ON BUTTON PRESSED
 router.post('/', (req, res) => {

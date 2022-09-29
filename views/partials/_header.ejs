@@ -1,8 +1,9 @@
 <head>
   <link rel="stylesheet" href="/styles/_header.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Stalinist+One&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Righteous&family=Stalinist+One&display=swap"
     rel="stylesheet">
 </head>
 <header>
@@ -18,7 +19,7 @@
       <form method="POST" action="/logout">
         <button name="logout" type="submit" class="logout">Log-out</button>
       </form>
-    <% } else { %>
+      <% } else { %>
       <!--logged-in-->
       <form method="POST" action="/login">
         <textarea name="name">  </textarea>
@@ -27,7 +28,7 @@
           <button name="login" type="submit" class="register" value="register">Register</button>
         </div>
       </form>
-    <% } %>
+      <% } %>
     </div>
   </nav>
 </header>

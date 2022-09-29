@@ -13,9 +13,10 @@
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/questions.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Stalinist+One&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Righteous&family=Stalinist+One&display=swap"
     rel="stylesheet">
 
   <script src="/vendor/jquery-3.0.0.js"></script>
@@ -28,8 +29,8 @@
     <main id="main">
       <form id="completeQuizCreate" data-quiz-id="<%=id%>" action="/create/:id/complete" method="POST">
         <button type="submit">Generate Quiz</button>
-      </form>
-      <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
+    </form>
+    <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
         <section id="creationQnA">
           <div class="questionContainer">
             <label>Question</label>

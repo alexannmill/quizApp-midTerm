@@ -16,18 +16,18 @@ router.get("/", (req, res) => {
 
 //name entered redirect to questions form
 router.post("/", (req, res) => {
-  const name = req.body.name;
   const userID = req.session.user_id;
+  const name = req.body.name;
   const shortURL = db.generateRandomNumber();
-  db.createQuiz(name, userID,shortURL)
-  .then((quiz) => {
-    const id = quiz.id;
-    res.send({id})
-  })
-  .catch((err) => {
-    res.status(500).send();
-    console.log(err);
-  })
+  db.createQuiz(name, shortURL, 1)
+    .then((quiz) => {
+      const id = quiz.id;
+      res.send({ id });
+    })
+    .catch((err) => {
+      res.status(500).send();
+      console.log(err);
+    });
 });
 
 //questions form
@@ -54,12 +54,13 @@ router.post("/:id", (req, res) => {
     .then((question) => {
       db.numOfQuestions(question.quiz_id)
       .then((numOfquestions) => {
-        const numOFq = numOfquestions
+        const numOFq = numOfquestions;
         const tempVars = {
-          question, numOFq
+          question,
+          numOFq,
         };
-          res.status(200).send(tempVars);
-      })
+        res.status(200).send(tempVars);
+      });
     })
     .catch((err) => {
       res.status(500).send();
@@ -67,20 +68,39 @@ router.post("/:id", (req, res) => {
     });
 });
 
-//Once all questions are complete compiling all together
-router.post("/:id/complete", (req, res) => {
+//Once all questions are complete
+router.post("/:id/public", (req, res) => {
   const quiz_id = req.params.id;
-  db.quizVisible(quiz_id)
-  .then((quiz_id)=> {
-    console.log('quizid:', quiz_id)
-  })
-  res.status(200).send(quiz_id)
+  const user_id = db.quizVSuser(quiz_id)
+  const userID = req.session.user_id
+  if (!user || user_id !== user){
+    res.status(400).send(`Unable to assess quiz.    <a href="/">Back Home</a>`)
+  }
+  db.quizVisible(quiz_id).then((quiz_id) => {
+    console.log("quizid:", quiz_id);
+  });
+  res.render("quiz", {quiz_id});
 });
 
-
+//GET overview of created quiz
 router.get("/:id/complete", (req, res) => {
   const id = req.params.id;
-  res.render("create_quiz_overview", {id})
-})
+  console.log('id:', id)
+  const user_id = db.quizVSuser(quiz_id)
+  const user = req.session.user_id
+  if (!user_id || user_id !== user){
+    res.status(400).send(`Unable to assess quiz.    <a class="navbar-brand" href="/">Back Home</a>`)
+  }
+  db.collectForReport(id)
+  .then((quizData) => {
+    // const quiz_Data = quizData
+    console.log('quiz_Data:', quizData)
+    res.render("create_quiz_overview", {id, quizData})
+  })
+  .catch((err) => {
+    res.status(500).send();
+    console.log(err);
+  })
+});
 
 module.exports = router;
