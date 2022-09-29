@@ -59,10 +59,10 @@ $(function () {
 
     $("#overview").submit(function (e) {
       e.preventDefault();
-      $.get(`/create/${quiz_id}/complete`, function (quiz_id) {
-        console.log("quiz_id:", quiz_id);
+      $.get(`/create/${quiz_id}/complete`, function (id, quiz_Data) {
+        console.log("quizDataA:", quiz_Data);
         //once again get request sends but page does not render, have to redirect using
-        window.location.href = `/create/${quiz_id}/complete`;
+        window.location.href = `/create/${id}/complete`;
       });
     });
   });

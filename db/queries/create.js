@@ -119,6 +119,7 @@ const collectForReport = (id) => {
     )
     .then((result) => {
       const quizData = result.rows;
+      console.log('quizDataQ:', quizData)
       return quizData;
     });
 };

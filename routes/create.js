@@ -50,7 +50,8 @@ router.post("/:id", (req, res) => {
   const quiz_id = req.params.id;
   db.createQuestion(req.body, quiz_id)
     .then((question) => {
-      db.numOfQuestions(question.quiz_id).then((numOfquestions) => {
+      db.numOfQuestions(question.quiz_id)
+      .then((numOfquestions) => {
         const numOFq = numOfquestions;
         const tempVars = {
           question,
@@ -76,12 +77,13 @@ router.post("/:id/public", (req, res) => {
   db.quizVisible(quiz_id).then((quiz_id) => {
     console.log("quizid:", quiz_id);
   });
-  res.render("quiz", {id, userID});
+  res.render("quiz", {quiz_id});
 });
 
 //GET overview of created quiz
 router.get("/:id/complete", (req, res) => {
   const id = req.params.id;
+  console.log('id:', id)
   // const user_id = db.quizVSuser(quiz_id)
   // const user = req.session.user_id
   // if (!user_id || user_id !== user){
@@ -89,7 +91,14 @@ router.get("/:id/complete", (req, res) => {
   // }
   db.collectForReport(id)
   .then((quizData) => {
-    res.status(200).send("create_quiz_overview", { id, quizData });
+    // const quiz_Data = quizData
+    console.log('quiz_Data:', quizData)
+    // res.render("create_quiz_overview", {id, qizData})
+    res.status(200).send("view", { id, quizData });
+  })
+  .catch((err) => {
+    res.status(500).send();
+    console.log(err);
   })
 });
 
