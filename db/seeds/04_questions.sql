@@ -338,526 +338,382 @@ VALUES (14, 'Who plays the character of Po in the Kung Fu Panda movies?', 'Jack 
 /* Quiz 15 - Film Medium 1 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'In what year was the first Transformers movie released?', 1986, 2007, 1986, 1984, 2009);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'Which movie of film director Stanley Kubrick is known to be an adaptation of a Stephen King novel?', 'The Shining', 'The Shining', '2001: A Space Odyssey', 'Eyes Wide Shut', 'Dr. Strangelove');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'What was another suggested name for, the 1985 film, Back to the Future?', 'Spaceman From Pluto', 'Hill Valley Time Travelers', 'The Lucky Man', 'Spaceman From Pluto', 'The Time Travelers');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'Who was the director of Scott Pilgrim vs. the World (2010)?', 'Edgar Wright', 'Phil Lord', 'Chris Miller', 'Seth Rogan', 'Edgar Wright');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'What is the make and model of the tour vehicles in Jurassic Park (1993)?', '1992 Ford Explorer XLT', '1992 Toyota Land Cruiser', '1992 Ford Explorer XLT', 'Mercedes M-Class', '1992 Jeep Wrangler YJ Sahara');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'Which actor and martial artist starred as Colonel Guile in the 1994 action film adaptation of Street Fighter?', 'Jean-Claude Van Damme', 'Chuck Norris', 'Scott Adkins', 'Steven Seagal', 'Jean-Claude Van Damme');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'In the 2014 film Birdman, what is the primary instrument in the score?', 'Drums', 'Drums', 'Saxophone', 'Live Birds', 'Violin');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'Which of the following actors does not play a role in the movie The Usual Suspects?', 'Steve Buscemi', 'Kevin Spacey', 'Benicio Del Toro', 'Steve Buscemi', 'Gabriel Byrne');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'What was Marilyn Monroe`s character`s first name in the film Some Like It Hot?', 'Sugar', 'Sugar', 'Candy', 'Caramel', 'Honey');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (15, '', '', '', '', '', '');
+VALUES (15, 'What year did the James Cameron film Titanic come out in theaters?', 1997, 1999, 1996, 1997, 1998);
 
 /* Quiz 16 - Film Medium 2 Subject */
 
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'In Mulan (1998), who is the leader of the Huns?', 'Shan Yu', 'Li Shang', 'Fa Zhou', 'Chien-Po', 'Shan Yu');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'In Finding Nemo, what was the name of the mother of Nemo?', 'Coral', 'Coral', 'Sandy', 'Pearl', 'Shelly');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'About how much money did it cost for Tommy Wiseau to make his masterpiece The Room (2003)?', '6 Million', '1 Million', '6 Million', '$20,000', '10 Million');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'In which 1955 film does Frank Sinatra play Nathan Detroit?', 'Guys and Dolls', 'High Society', 'Anchors Aweigh', 'From Here to Eternity', 'Guys and Dolls');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'Who played Batman in the 1997 film Batman and Robin?', 'George Clooney', 'Michael Keaton', 'George Clooney', 'Val Kilmer', 'Christian Bale');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'Who directed the movie Alien?', 'Ridley Scott', 'Christopher Nolan', 'Michael Bay', 'James Cameron', 'Ridley Scott');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'Who directed the 1973 film American Graffiti?', 'George Lucas', 'Ron Howard', 'George Lucas', 'Francis Ford Coppola', 'Steven Spielberg');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'In which African country was the 2006 film Blood Diamond mostly set in?', 'Sierra Leone', 'Burkina Faso', 'Sierra Leone', 'Liberia', 'C.A.R.');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'What does TIE stand for in reference to the TIE Fighter in Star Wars?', 'Twin Ion Engine', 'Twin Ion Engine', 'Twin Iron Engine', 'Twin Interceptor ', 'Twin Inception Engine');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (16, '', '', '', '', '', '');
+VALUES (16, 'This trope refers to minor characters that are killed off to show how a monster works.', 'Red Shirt', 'Cannon Fodder', 'Expendables', 'Minions', 'Red Shirt');
 
-/* Quiz 17 - C Subject */
-
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (17, '', '', '', '', '', '');
-
-
-/* Quiz 18 - C Subject */
+/* Quiz 17 - Film Hard 1 */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'Which was the first of Alfred Hitchcock movies to be filmed in colour?', 'Rope', 'Psycho', 'Rope', 'Vertigo', 'Rebecca');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'What was the last Marx Brothers film to feature Zeppo?', 'Duck Soup', 'A Night at the Opera', 'A Day at the Races', 'Monkey Business', 'Duck Soup');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'What did the first moving picture depict?', 'A galloping horse', 'A galloping horse', 'A woman in a dress', 'A man walking', 'A crackling fire');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'In the Friday The 13th series, what year did Jason drown in?', 1957, 1961, 1946, 1957, 1950);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'Which sci-fi cult film has aliens attempting to prevent humans from creating a doomsday weapon?', 'Plan 9 from Outer Space', 'The Day The Earth Stood Still', 'It Came from Outer Space', 'The Man from Planet X', 'Plan 9 from Outer Space');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'Which 1994 film did Roger Ebert famously despise, saying: I hated hated hated hated hated this movie.', 'North', 'North', 'Richie Rich', 'The Santa Clause"', '3 Ninjas Kick Back');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'In order to cut costs, what were most of the extras of Mad Max (1979) paid with?', 'Beer', 'Food Stamps', 'Beer', 'Clothing', 'Catering');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'According to Star Wars lore, which planet does Obi-Wan Kenobi come from?', 'Stewjon', 'Alderaan', 'Tatooine', 'Stewjon', 'Naboo');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'In Star Trek Nemesis, why was Praetor Shinzon created?', 'To replace Picard as a Romulan Agent', 'To become a friend of Picard', 'To replace Picard as a Romulan Agent', 'To steal the Enterprise', 'To destroy the Enterprise');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (18, '', '', '', '', '', '');
+VALUES (17, 'What was the name of the planet in Aliens?', 'LV-426', 'LV-426', 'Weyland Yutani Corporation Base', 'FR-838', 'DI-621');
 
 
-/* Quiz 19 - C Subject */
+/* Quiz 18 - Film Hard 2 */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'What did Alfred Hitchcock use as blood in the film Psycho?', 'Chocolate syrup', 'Ketchup', 'Chocolate syrup', 'Food coloring', 'Maple syrup');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'What was the first movie to ever use a Wilhelm Scream?', 'Distant Drums', 'The Charge at Feather River', 'Indiana Jones', 'Distant Drums', 'Treasure of the Sierra Madre');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'In the 1964 film Zulu, what song does the British Army company sing before the final battle?', 'Men of Harlech', 'Men of Harlech', 'Scotland the Brave', 'Colonel Bogey March', 'The British Grenadiers');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'In what year does Jurassic World open in the Jurassic Park universe?', 2005, 2020, 2015, 2010, 2005);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'What is the species of the Predator in the 1987 movie Predator?', 'Yautja', 'Phocrex', 'Yautja', 'Praetorian', 'Xenomorph');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'What was the wifi password given to Stephen Strange in Doctor Strange?', 'Shambala', 'Shambala', 'Peace', 'Ancient', 'Chakra');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'The film Mad Max: Fury Road features the Dies Irae from which composer?', 'Verdi', 'Berlioz', 'Mozart', 'Verdi', 'Brahms');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'What was the name of the actor who played Leatherface in the 1974 horror film, The Texas Chainsaw Massacre?', 'Gunnar Hansen', 'Edwin Neal', 'John Dugan', 'Joe Bill Hogan', 'Gunnar Hansen');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'What year was the German sci-fi epic Metropolis released in?', 1927, 1927, 1937, 1947, 1957);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (19, '', '', '', '', '', '');
+VALUES (18, 'What was the last film review Roger Ebert had published posthumously?', 'To the Wonder', '2012', 'To the Wonder', 'Midnight in Paris', 'Kingdom of Men');
 
 
-/* Quiz 20 - C Subject */
+/* Quiz 19 - History Easy 1 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'King Henry VIII was the second monarch of which European royal house?', 'Tudor', 'York', 'Tudor', 'Lancaster', 'Stuart');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'What was William Frederick Cody better known as?', 'Buffalo Bill', 'Pawnee Bill', 'Wild Bill Hickock', 'Billy the Kid', 'Buffalo Bill');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'During WWII, in 1945, the United States dropped atomic bombs on the two Japanese cities of Hiroshima and what other city?', 'Nagasaki', 'Nagasaki', 'Kawasaki', 'Tokyo', 'Kagoshima');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'The collapse of the Soviet Union took place in which year?', 1991, 1890, 1987, 1995, 1991);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'To what political party did Abraham Lincoln belong when elected POTUS?', 'Republican', 'Democrat', 'Independent', 'Whig', 'Republican');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'What is the historical name of Sri Lanka?', 'Ceylon', 'Kiribati', 'Siam', 'Ceylon', 'Myanmar');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'Who discovered Penicillin?', 'Alexander Flemming', 'Marie Curie', 'Alexander Flemming', 'Alfred Nobel', 'Louis Pasteur');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'The original Roman alphabet lacked the following letters EXCEPT:', 'X', 'W', 'U', 'X', 'J');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'Who was the first prime minister of Canada?', 'John Macdonald', 'Alexander Mackenzie', 'Robert Borden', 'John Abbott', 'John Macdonald');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (20, '', '', '', '', '', '');
+VALUES (19, 'How was Socrates executed?', 'Poison', 'Decapitation', 'Poison', 'Crucifixion', 'Hanging');
 
 
-/* Quiz 21 - C Subject */
+/* Quiz 20 - History Easy 2 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'Which famous military commander marched an army, including war elephants, over the Alps during the Second Punic War?', 'Hannibal', 'Tiberius', 'Alexander the Great', 'Tiber Septim', 'Hannibal');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'Which of the following was Brazil was a former colony under?', 'Portugal', 'Spain', 'Portugal', 'France', 'Netherlands');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'What was the name commonly given to the ancient trade routes that connected the East and West of Eurasia?', 'Silk Road', 'Silk Road', 'Spice Route', 'Clay Trail', 'Salt Marsh');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'In which year did the Invasion of Kuwait by Iraq occur?', 1990, 1960, 1970, 1980, 1990);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'When was Google founded?', 'September 4, 1998', 'October 9, 1997', 'September 4, 1998', 'December 12, 1989', 'Feburary 7th, 2000');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'Which of the following countries was not an axis power during World War II?', 'Soviet Union', 'Italy', 'Japan', 'Germany', 'Soviet Union');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'Which modern country is known as The Graveyard of Empires?', 'Afghanistan', 'China', 'Russia', 'Afghanistan', 'Germany');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'Who was the first president of the United States?', 'George Washington', 'George Washington', 'James Madison', 'Thomas Jefferson', 'James K. Polk');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
+VALUES (20, 'Who led the Communist Revolution of Russia?', 'Vladimir Lenin', 'Joseph Stalin', 'Vladimir Lenin', 'Mikhail Gorbachev', 'Vladimir Putin');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (21, '', '', '', '', '', '');
-
-/* Quiz 22 - C Subject */
+VALUES (20, 'Which modern day country is the region that was known as Phrygia in ancient times?', 'Turkey', 'Syria', 'Turkey', 'Greece', 'Egypt');
 
 
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (22, '', '', '', '', '', '');
-
-
-/* Quiz 23 - C Subject */
+/* Quiz 21 - History Medium 1 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'The seed drill was invented by which British inventor?', 'Jethro Tull', 'Charles Babbage', 'Isaac Newton', 'J.J Thomson', 'Jethro Tull');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'What disease crippled President Franklin D. Roosevelt and led him to help the nation find a cure?', 'Polio', 'Sleeping Sickness', 'Meningitis', 'Polio', 'Tuberculosis');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'In relation to the British Occupation in Ireland, what does the IRA stand for?', 'Irish Republican Army', 'Irish Rebel Alliance', 'Irish Reformation Army', 'Irish-Royal Alliance', 'Irish Republican Army');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'The crown of the Empire State Building was originally built for what purpose?', 'Airship Dock', 'Airship Dock', 'Lightning Rod', 'Radio-Antennae', 'Dias');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'Who crowned Charlemagne as Holy Roman Emperor on Christmas Day in 800?', 'Pope Leo III', 'Pope Pius II', 'Pope Valentine', 'Pope Leo III', 'Pope Urban IV');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'In 1845, a series of wars named after which indigenous people began in New Zealand?', 'Maori', 'Polynesians', 'Aborigines', 'Maori', 'Torres Straight');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'The Thirty Years War ended with which treaty?', 'Peace of Westphalia', 'Treaty of Versailles', 'Peace of Westphalia', 'Treaty of Paris', 'Peace of Prague');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'Who tutored Alexander the Great?', 'Aristotle', 'Socrates', 'Aristotle', 'Plato', 'Plutarch');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'What year did the Battle of Agincourt take place?', 1415, 1325, 1415, 1565, 1810);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (23, '', '', '', '', '', '');
+VALUES (21, 'Joseph Smith was the founder of what religion?', 'Mormonism', 'Scientology', 'Jainism', 'Mormonism', 'Zoroastrianism');
 
 
-/* Quiz 24 - C Subject */
+/* Quiz 22 - History Medium 2 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'What was the capital of South Vietnam before the Vietnam War?', 'Saigon', 'Saigon', 'Ho Chi Minh City', 'Hanoi', 'Hue');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'How many years did the Hundred Years War last?', 116, 96, 100, 106, 116);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'Who was the last Roman emperor in the Year of Four Emperors (69 AD)?', 'Vespasian', 'Vitellius', 'Vespasian', 'Otho', 'Galba');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'In what dialogue did Socrates defend himself to the court of Athens?', 'The Apology', 'The Laws', 'The Republic', 'The Apology', 'The Sermon');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'What was the unofficial name for Germany between 1919 and 1933?', 'Weimar Republic', 'German Democratic Republic', 'Oesterreich', 'Federal Republic of Germany', 'Weimar Republic');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'In what year did the Berlin Wall fall?', 1989, 1980, 1985, 1989, 1992);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'Who was the Prime Minister of the United Kingdom for most of World War II?', 'Winston Churchill', 'Neville Chamberlain', 'Harold Macmillan', 'Winston Churchill', 'Edward Heath');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'Which U.S. President was in office when the Gulf War began?', 'George H. W. Bush', 'Richard Nixon', 'George W. Bush', 'Ronald Regan', 'George H. W. Bush');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'Which of these facilities was not present on the Titanic?', 'Fainting room', 'Fainting room', 'Turkish bath', 'Kennel', 'Squash court');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (24, '', '', '', '', '', '');
+VALUES (22, 'Which of his six wives was Henry VIII married to the longest?', 'Catherine of Aragon', 'Anne Boleyn', 'Jane Seymour', 'Catherine of Aragon', 'Catherine Parr');
 
 
-/* Quiz 25 - D Subject */
+/* Quiz 23 - History Hard 1 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'Which English king was married to Eleanor of Aquitaine?', 'Henry II', 'Arthur II', 'Henry V', 'Richard I', 'Henry II');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'When was Adolf Hitler appointed as Chancellor of Germany?', 1933, 1927, 1933, 1937, 1939);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'The Second Boer War in 1899 was fought where?', 'South Africa', 'Argentina', 'Nepal', 'South Africa', 'Bulgaria');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'The Hagia Sophia was commissioned by which emperor of the Byzantine Empire?', 'Justinian I', 'Justinian I', 'Constantine IV', 'Arcadius', 'Theodesius the Great');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'The Battle of Hastings was fought in which year?', 1066, 903, 1066, 1214, 1491);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'Which countries participated in the Lobster War?', 'France and Brazil', 'United States and England', 'Australia and New Zealand', 'Canada and Norway', 'France and Brazil');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'The Pantheon in Rome was used to worship which god(s)?', 'Any', 'Athena & Zeus', 'Hera & Zeus', 'The Olympic Gods', 'Any God');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'Which one of these rulers did not belong to the Habsburg dynasty?', 'Philip V', 'Philip V', 'Charles V', 'Phillip II', 'Francis Joseph');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'What did the first vending machines in the late 19th century dispense?', 'Post cards', 'Sodas', 'Alcohol', 'Cigarettes', 'Post cards');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (25, '', '', '', '', '', '');
+VALUES (23, 'From 1940 to 1942, what was the capital-in-exile of Free France?', 'Brazzaville', 'Algiers', 'Tunis', 'Brazzaville', 'Paris');
 
 
-/* Quiz 26 - D Subject */
+/* Quiz 24 - History Hard 2 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'When did the French Revolution begin?', 1789, 1774, 1867, 1805, 1789);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'During the Roman Triumvirate of 42 BCE, what region of the Roman Republic was given to Lepidus?', 'Hispania', 'Italia', 'Hispania', 'Asia-minora', 'Gallia');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'In which year did the Tokyo Subway Sarin Attack occur?', 1995, 1980, 1985, 1990, 1995);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'What was found in 1946 by two young shepards near a cave?', 'Dead Sea Scrolls', 'Dead Sea Scrolls', 'Magna Carta', 'The Book of the Dead', 'The Canterbury Tales');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'What was the original name of New York City?', 'New Amsterdam', 'New Rome', 'New Paris', 'New London', 'New Amsterdam');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'Toussaint Louverture led a successful slave revolt in which country?', 'Haiti', 'Cuba', 'Haiti', 'French Guyana', 'United States of America');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'Who assassinated President James A. Garfield?', 'Charles Guiteau', 'Charles Guiteau', 'Sirhan Sirhan', 'John Wilkes Booth', 'Leon Czolgosz');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'The Bohemian Revolt (1618-1620) started after Protestants in Prague did what to the Catholic Regents', 'Threw them out of a window', 'Insulted them', 'Locked them in stockades', 'Hung them', 'Threw them out of a window');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'Which of these positions did the astronomer and physicist Isaac Newton not hold?', 'Surveyor to the City of London', 'Member of Parliament', 'Professor of Mathematics', 'Surveyor to the City of London', 'Warden of the Royal Mint');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (26, '', '', '', '', '', '');
+VALUES (24, 'Which country did the Eureka Rebellion, an 1856 battle against colonial rule, take place in?', 'Australia', 'Canada', 'India', 'Australia', 'Brazil');
 
 
-/* Quiz 27 - D Subject */
+/* Quiz 25 - General Knowledge Easy 1 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'Area 51 is located in which US state?', 'Nevada', 'Utah', 'Nevada', 'Arizona', 'New Mexico');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'What does the S stand for in the abbreviation SIM, as in SIM card?', 'Subscriber', 'Single', 'Secure', 'Solid', 'Subscriber');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'Which American president appears on a one dollar bill?', 'George Washington', 'Thomas Jefferson', 'George Washington', 'Abraham Lincoln', 'Benjamin Franklin');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'What is the shape of the toy invented by Hungarian professor Erno Rubik?', 'Cube', 'Pyramid', 'Cylinder', 'Sphere', 'Cube');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'Which of these colours is NOT featured in the logo for Google?', 'Pink', 'Pink', 'Green', 'Blue', 'Yellow');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'What is Tasmania?', 'An Australian State', 'An African Country', 'A Warner Brothers Character', 'An Australian State', 'A Psychological Disorder');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'What nuts are used in the production of marzipan?', 'Almonds', 'Peanuts', 'Almonds', 'Pistachio', 'Walnut');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'What is Cynophobia the fear of?', 'Dogs', 'Dogs', 'Birds', 'Flying', 'Germs');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'When someone is inexperienced they are said to be what color?', 'Green', 'Blue', 'Yellow', 'Flush', 'Green');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (27, '', '', '', '', '', '');
+VALUES (25, 'What are Panama hats made out of?', 'Straw', 'Silk', 'Flax', 'Straw', 'Hemp');
 
 
-/* Quiz 28 - D Subject */
+/* Quiz 26 - General Knowledge Easy 2 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'Which of the following blood component forms a plug at the site of injuries?', 'Platelets', 'Red Blood Cells', 'White Blood Cells', 'Plasma', 'Platelets');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'When someone is cowardly, they are said to have what color belly?', 'Yellow', 'Red', 'Yellow', 'Green', 'Diamond');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'What machine element is located in the center of fidget spinners?', 'Bearings', 'Bearings', 'Axles', 'Gears', 'Belts');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'Which one of these is not a typical European sword design?', 'Scimitar', 'Falchion', 'Scimitar', 'Ulfberht', 'Flamberge');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'What do the letters in the GMT time zone stand for?', 'Greenwich Mean Time', 'Global Meridian Time', 'General Median Time', 'Greenwich Mean Time', 'Glasgow Man Time');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'What alcoholic drink is made from molasses?', 'Rum', 'Rum', 'Whisky', 'Vodka', 'Gin');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'What is the largest organ of the human body?', 'Skin', 'Brain', 'Liver', 'Heart', 'Skin');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'What is the name of the Jewish New Year?', 'Rosh Hashanah', 'New Year', 'Succoss', 'Rosh Hashanah', 'Elul');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'What zodiac sign is represented by a pair of scales?', 'Libra', 'Aries', 'Libra', 'Capricorn', 'Sagittarius');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (28, '', '', '', '', '', '');
+VALUES (26, 'Which of the following is not an Ivy League University?', 'Stanford', 'Princeton', 'Harvard', 'Stanford', 'University of Pennsylvania');
+
+
+/* Quiz 27 - General Knowledge Medium 1 Subject */
+
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'In a standard set of playing cards, which is the only king without a moustache?', 'Hearts', 'Hearts', 'Spades', 'Diamonds', 'Clubs');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'What alcoholic drink is mainly made from juniper berries?', 'gin', 'tequila', 'vodka', 'gin', 'aperol');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'What is the Italian word for tomato?', 'Pomodoro', 'Cipolla', 'Aglio', 'Peperoncino', 'Pomodoro');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'What character was once considered to be the 27th letter of the alphabet?', 'Ampersand', 'Tilde', 'Ampersand', 'Pilcrow', 'Colon');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'What fast food chain has the most locations globally?', 'Subway', 'Starbucks', 'Subway', 'McDonalds', 'KFC');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'What does a milliner make and sell?', 'Hats', 'Shirts', 'Belts', 'Hats', 'Shoes');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'On average, Americans consume 100 pounds of what per second?', 'Chocolate', 'Chocolate', 'Potatoes', 'Cocaine', 'Donuts');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'What was the original name of the search engine Google?', 'BackRub', 'BackRub', 'CatMassage', 'SearchPro', 'Netscape Navigator');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'What is the star sign of someone born on Valentines day?', 'Aquarius', 'Scorpio', 'Pisces', 'Aquarius', 'Capricorn');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (27, 'Frank Lloyd Wright was the architect behind what famous building?', 'The Guggenheim', 'Villa Savoye', 'Sydney Opera House', 'The Space Needle', 'The Guggenheim');
+
+
+/* Quiz 28 - General Knowledge Medium 2 Subject */
+
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'This field is sometimes known as The Dismal Science', 'Economics', 'Philosophy', 'Economics', 'Politics', 'Physics');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'After how many years would you celebrate your crystal anniversary?', 15, 10, 15, 20, 25);
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'Earl Grey tea is black tea flavoured with what?', 'Bergamot oil', 'Lavender', 'Bergamot oil', 'Honey', 'Vanilla');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'Where did the pineapple plant originate?', 'South America', 'Asia', 'Europe', 'Hawaii', 'South America');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'What is the name given to Indian food cooked over charcoal in a clay oven?', 'Tandoori', 'Biryani', 'Tiki Masala', 'Tandoori', 'Saag Paneer');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'Who is a co-founder of music streaming service Spotify?', 'Daniel Ek', 'Michael Breidenbruecker', 'Felix Miller', 'Sean Parker', 'Daniel Ek');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'In 2013 how much money was lost by Nigerian scams?', '12.7 Billion', '95 Million', '950 Million', '12.7 Billion', '1.35 Billion');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'Apple co-founder Steve Jobs died from complications of which form of cancer?', 'Pancreatic', 'Pancreatic', 'Bone', 'Liver', 'Stomach');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'The architect known as Le Corbusier was an important figure in what style of architecture?', 'Modernism', 'Neoclassical', 'Modernism', 'Baroque', 'Gothic Revival');
+INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
+VALUES (28, 'What is the last letter of the Greek alphabet?', 'Omega', 'Mu', 'Tao', 'Epsilon', 'Omega');
 
 
 
-/* Quiz 29 - D Subject */
+/* Quiz 29 - General Knowledge Hard 1 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'What year was Queen Elizabeth II born?', 1926, 1919, 1923, 1926, 1930);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'Which of the following languages does NOT use gender as a part of its grammar?', 'Turkish', 'Turkish', 'German', 'Danish', 'Polish');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'What was Bank of America originally established as?', 'Bank of Italy', 'Bank of Long Island', 'Bank of Pennsylvania', 'Bank of Italy', 'Bank of Charlotte');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'Which product did Nokia, the telecommunications company, originally sell?', 'Paper', 'Processors', 'Computers', 'Paper', 'Phones');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'Chartreuse is a color between yellow and what?', 'Green', 'Red', 'Green', 'Black', 'Purple');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'Nephelococcygia is the practice of doing what?', 'Finding shapes in clouds', 'Swimming in freezing water', 'Breaking glass with your voice', 'Sleeping with your eyes open', 'Finding shapes in clouds');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'What is the most commonly used noun in the English language?', 'Time', 'Time', 'Home', 'Water', 'Man');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'Sciophobia is the fear of what?', 'Shadows', 'Eating', 'Shadows', 'Transportation', 'Bright lights');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'Which of the following chemicals are found in eggplant seeds?', 'Nicotine', 'Psilocybin', 'Mescaline', 'Nicotine', 'Cyanide');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (29, '', '', '', '', '', '');
+VALUES (29, 'Before the 19th Century, the Living Room was originally called the?', 'Parlor', 'Sitting Room', 'Smoking Room', 'Open Room', 'Parlor');
 
 
-/* Quiz 30 - D Subject */
+/* Quiz 30 - General Knowledge Hard 2 Subject */
 
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'What is the airspeed velocity of an unladen swallow?', '24 MPH', '35 MPH', '20 MPH', '15 MPH', '24 MPH');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'What type of dog is Handsome Dan, the mascot of Yale University?', 'Bulldog', 'Bulldog', 'Boxer', 'Yorkshire Terrier', 'Pug');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'What is a color named after the mallow flower?', 'Mauve', 'Pink', 'Maroon', 'Mauve', 'Yellow');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'How many notes are there on a standard grand piano?', 88, 98, 108, 88, 78);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'Located in Chile, El Teniente is the largest underground mine for what metal?', 'Copper', 'Iron', 'Nickel', 'Silver', 'Copper');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'If you planted the seeds of Quercus robur, what would grow?', 'Trees', 'Grains', 'Flowers', 'Trees', 'Vegetables');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'What is the romanized Arabic word for moon?', 'Qamar', 'Najma', 'Kawkab', 'Qamar', 'Shams');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'How many calories are in a 355 ml can of Pepsi Cola?', 150, 250, 300, 100, 150);
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
+VALUES (30, 'The word astasia means which of the following?', 'The inability to stand up', 'The inability to make decisions', 'The inability to concentrate', 'The inability to stand up', 'The desire to disrobe');
 INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (30, '', '', '', '', '', '');
-
-
-/* Quiz 31 - D Subject */
-
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (31, '', '', '', '', '', '');
-
-
-/* Quiz 32 - D Subject */
-
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (32, '', '', '', '', '', '');
-
-
-/* Quiz 33 - E Subject */
-
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (33, '', '', '', '', '', '');
-
-
-/* Quiz 34 - E Subject */
-
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (34, '', '', '', '', '', '');
-
-
-/* Quiz 35 - E Subject */
-
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (35, '', '', '', '', '', '');
-
-
-/* Quiz 36 - E Subject */
-
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
-INSERT INTO questions (quiz_id, question, correct, answer1, answer2, answer3, answer4)
-VALUES (36, '', '', '', '', '', '');
+VALUES (30, 'According to 2014-2015 statistics, what percentage of Australians were born overseas?', '28', '7', '13', '20', '28');

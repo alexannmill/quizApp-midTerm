@@ -1,4 +1,10 @@
 // See: https://sass-lang.com/
+@import "./_variables.scss";
+
+body {
+  // background-image: $background;
+  color:white
+}
 
 #featured {
   display: flex;

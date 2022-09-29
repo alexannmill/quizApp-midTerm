@@ -1,21 +1,30 @@
-html {
-  width: 100%;
+@import "./_variables.scss";
+
+body{
+  background-image: $background;
 }
-@mixin flexcenter() {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+#main {
+  @include flexcenter();
+  // flex-direction: column;
+  width: 100vw
 }
 
 .questionContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 2em;
-  margin-inline: 5em;
-  background:darkcyan;
+  color: $purple;
+  // width: 100vw;
+  textarea {
+    @include textarea();
+    width: 20em;
+  }
   label{
     align-self: center;
     padding: 1em;
+    font-size: large;
   }
 }
 
@@ -23,6 +32,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: $pink;
+  // width: 100vw;
   label {
     padding: 1em;
   }
@@ -31,10 +42,16 @@ html {
     align-items: center;
   }
   button {
-    margin: 1em
+    @include button();
+    width: 5em;
+    margin: 0.5em;
   }
   textarea {
-
+    @include textarea;
+    width: 12em;
+  }
+  label {
+    font-size: large;
   }
 }
 
@@ -47,11 +64,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1em;
-  background: greenyellow;
-  border-radius: 3px;
+  button {
+    @include button();
+    background-color: $green;
+    padding: 0.5em;
+  }
 }
 
-#main {
-  @include flexcenter();
-}
