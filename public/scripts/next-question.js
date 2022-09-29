@@ -1,10 +1,13 @@
 $(document).ready(function() {
   let questionNum = 0;
   let correctAns = 0;
+  const $hideError = $(".error");
+  $hideError.hide();
+
   // Function creates the elements that are in .contain with the new question data
   const createQuestionElement = function(question) {
     let $question = $(`
-    <h5>${question.question}</h5>
+    <h2>${question.question}</h2>
     <div class="top-row-answers">
       <div class="answers">
         <h4>A: ${question.answer1}</h4>
@@ -76,44 +79,58 @@ $(document).ready(function() {
     $(this).addClass("answer-picked");
   });
 
-
   const $next = $(".next");
+
   // event gets and shows the user the next question with it's set of answer
   $next.on("click", function () {
     const $answers = $(this).siblings(".content").find(".answers");
     let quiz = $('[quiz-id]').attr('quiz-id');
+    let user = $('[user-id]').attr('user-id');
     const button = this;
     quiz = Number(quiz);
+    user = Number(user);
+    let answer = answerCheck($answers);
+    const $error = $(this).siblings(".error");
 
-
-    $.get(`/quiz/data/${quiz}`)
-    .then(function(results) {
-      const currentQuestion = results[questionNum];
-      let answer = answerCheck($answers);
-      if (answer.textContent.trim().slice(3) === currentQuestion.correct) {
-        correctAns++;
+    if (!answer) {
+      $error.slideDown();
+    } else{
+      if ($error.is(":visible")) {
+        $error.slideUp("fast");
       }
 
-      // change button text to submit when on last question
-      if (results.length - 2 === questionNum) {
-        $(button).text("Submit");
-      }
+      $.get(`/quiz/data/${quiz}`)
+      .then(function(results) {
+        // console.log("questionNum",questionNum);
+        // console.log("results length", results.length);
+        console.log("answers", correctAns);
+        const currentQuestion = results[questionNum];
+        if (answer.textContent.trim().slice(3) === currentQuestion.correct) {
+          correctAns++;
+        }
 
-      // loads next question
-      if (results.length - 1 > questionNum) {
-        questionNum++;
-        renderNextQuestion(results[questionNum]);
+        // change button text to submit when on last question
+        if (results.length - 2 === questionNum) {
+          $(button).text("Submit");
+        }
 
-      // sends quiz data results to be added to the database and loads results page
-      } else {
-        const percentage = resultOfQuiz(correctAns, results.length)
-        const grade = getGrade(percentage);
-        $.post(`/results/${quiz}/1`, {percentage, grade})
-        .then(function() {
-          window.location.assign(`/results/${quiz}/1`);
-        });
-      }
-    });
+        // loads next question
+        if (results.length - 1 > questionNum) {
+          questionNum++;
+          renderNextQuestion(results[questionNum]);
+
+        // sends quiz data results to be added to the database and loads results page
+        } else {
+          const percentage = resultOfQuiz(correctAns, results.length);
+          const grade = getGrade(percentage);
+          const name = results[0].name;
+          $.post(`/results/${quiz}/${user}`, {percentage, grade, name})
+          .then(function() {
+            window.location.assign(`/results/${quiz}/${user}`);
+          });
+        }
+      });
+    }
   });
 
 

@@ -5,6 +5,7 @@ require('dotenv').config();
 const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
 const morgan = require('morgan');
+const cookieSession = require("cookie-session");
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -24,6 +25,12 @@ app.use(
     isSass: false, // false => scss, true => sass
   })
 );
+app.use(cookieSession({
+  name: "session",
+  keys: ["user_id"],
+})
+);
+
 app.use(express.static('public'));
 
 // Separated Routes for each Resource
@@ -34,6 +41,8 @@ const usersRoutes = require('./routes/users');
 const createQuiz = require('./routes/create');
 const userResults = require('./routes/results');
 const quiz = require('./routes/quiz');
+const login = require('./routes/login');
+const logout = require('./routes/logout');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -44,6 +53,8 @@ app.use('/users', usersRoutes);
 app.use('/results', userResults);
 app.use('/create', createQuiz);
 app.use('/quiz', quiz);
+app.use('/login', login);
+app.use('/logout', logout);
 
 // Note: mount other resources here, using the same pattern above
 
@@ -52,7 +63,8 @@ app.use('/quiz', quiz);
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
-  res.render('index');
+  const userID = req.session.user_id;
+  res.render('index', {userID});
 });
 
 
