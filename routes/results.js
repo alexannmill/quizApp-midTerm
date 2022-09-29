@@ -8,7 +8,6 @@ router.get('/:quiz/:id', (req, res) => {
   const userID = req.session.user_id;
   database.getResults(req.params.id, req.params.quiz)
     .then(function(results) {
-      console.log(results);
       if (results.length === 0) {
         res.status(400).send(`This result does not exist :(   <a href="/">Back Home</a>`);
       }
@@ -16,12 +15,14 @@ router.get('/:quiz/:id', (req, res) => {
     })
 });
 
+
+// REDIRECTS USER TO THEIR ALL RESULTS PAGE
 router.get('/', (req, res) => {
   const userID = req.session.user_id;
-  if (!userID){
-    res.status(400).send(`Please login to see results.   <a href="/">Back Home</a>`);
+  if (userID){
+    res.redirect(`results/${userID}/`);
   }
-  res.redirect(`results/${userID}/`);
+  res.status(400).send(`Please login to see results.   <a href="/">Back Home</a>`);
 })
 
 // RENDERS ALL OF A USER'S MOST RECENT QUIZ RESULTS
@@ -29,9 +30,8 @@ router.get('/:id', (req, res) => {
   const userID = req.session.user_id;
   database.getAllResults(req.params.id)
     .then(function(results) {
-      console.log(results);
       if (!userID){
-        res.status(400).send(`Please login to see results.   <a href="/">Back Home</a>`)
+        return res.status(400).send(`Please login to see results.   <a href="/">Back Home</a>`)
       }
       res.render('allResults', {results, userID});
     });

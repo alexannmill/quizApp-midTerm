@@ -17,8 +17,9 @@ router.get("/", (req, res) => {
 //name entered redirect to questions form
 router.post("/", (req, res) => {
   const name = req.body.name;
+  const userID = req.session.user_id;
   const shortURL = db.generateRandomNumber();
-  db.createQuiz(name, shortURL)
+  db.createQuiz(name, userID,shortURL)
   .then((quiz) => {
     const id = quiz.id;
     res.send({id})
@@ -33,13 +34,17 @@ router.post("/", (req, res) => {
 //GET /create/:id
 router.get(`/:id`, (req, res) => {
   const id = req.params.id;
-  const user_id = db.quizVSuser(id);
+  console.log(id);
   const userID = req.session.user_id;
-  console.log(userID);
-  if (!userID || user_id !== userID){
-    res.status(400).send(`Unable to assess quiz.    <a class="navbar-brand" href="/">Back Home</a>`);
-  }
-  res.render("questions", { id, userID });
+  db.quizVSuser(id)
+  .then(function(results){
+    console.log(userID);
+    if (!userID || results.user_id !== userID){
+      res.status(400).send(`Unable to assess quiz.    <a class="navbar-brand" href="/">Back Home</a>`);
+    }
+    res.render("questions", { id, userID });
+  })
+
 });
 
 //adding questions to database

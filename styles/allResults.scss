@@ -1,40 +1,36 @@
 @import './_variables.scss';
 
 body {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: $background;
 }
 
 table {
-  width: 100%;
+  width: 90%;
+  border-collapse: separate;
+  border-spacing: 0em 1em;
+  border-radius: 6px;
+  overflow:hidden
 }
-thead {
 
-  tr{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-
-  }
-
-}
 
 tbody {
 
   tr{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    border: $blue solid 3px;
     @include textarea();
-    margin: 10px 0px;
   }
 
 }
 
-div h1 {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+div {
+  h1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
 }
+
+
