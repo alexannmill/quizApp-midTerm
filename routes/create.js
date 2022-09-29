@@ -93,8 +93,7 @@ router.get("/:id/complete", (req, res) => {
   .then((quizData) => {
     // const quiz_Data = quizData
     console.log('quiz_Data:', quizData)
-    // res.render("create_quiz_overview", {id, qizData})
-    res.status(200).send("view", { id, quizData });
+    res.render("create_quiz_overview", {id, quizData})
   })
   .catch((err) => {
     res.status(500).send();
