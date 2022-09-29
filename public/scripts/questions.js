@@ -1,7 +1,7 @@
 // func for dropping name entry and appending questions
 $(function () {
   //hide generate qestuin button until 2 questions have been answered
-  $("#completeQuizCreate").hide();
+  // $("#completeQuizCreate").hide();
 
   //sumbit for question form
   $("#questionform").submit(function (e) {
@@ -39,51 +39,54 @@ $(function () {
         $("#completeQuizCreate").show();
       }
       $("#questionform").trigger("reset");
-    });
 
-    //on submit for generate quiz
-    $("#completeQuizCreate").submit(function (e) {
-      const $finalHTML = `<section id="createComplete">
+      //on submit for generate quiz
+    });
+  });
+
+        // func for dropping qNa text form for final page
+  const HTMLswapFinal = (quiz_id) => {
+    const $finalHTML = `<section id="createComplete">
     <h1> Your Quiz is Complete!</h1>
     <div>
     <form id=" createAnother" action="/create" method="GET">
     <button class="completeButton  type="submit">Make Another!</button>
     </form>
-    <form id="makePublic" action="/create/:id/public" method="POST">
+    <form id="makePublic" action="/create/${quiz_id}/public" method="POST">
     <button class="completeButton" type="submit">Make Public and share with friends! </button>
     </form>
-    <form id="overview" action="/create/:id/complete" method="GET">
+    <form id="overview" action="/create/${quiz_id}/complete" method="GET">
     <button class="overview" type="submit">Review your Quiz!</button>
     </form>
     </div>
     <img src="https://www.cameronaskin.info/ac8e719b3f7086bff10c0731d6d005ea.gif">
     </section>`;
+    $("#creationQnA").detach();
+    $("#completeQuizCreate").detach();
+    $("#main").append($finalHTML);
+  };
 
-    // func for dropping qNa text form for final page
-    const HTMLswapFinal = () => {
-      $("#creationQnA").detach();
-      $("completeQuizCreate").detach();
-      $("#main").append($finalHTML);
-      $("#completeQuizCreate").detach();
-    };
+
+  $("#completeQuizCreate").submit(function (e) {
     e.preventDefault();
     const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
     HTMLswapFinal(quiz_id);
   });
-
   //make public quiz changes status in db
   $("#makePublic").submit(function (e) {
     e.preventDefault();
+    const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
     $.post(`/create/${quiz_id}/public`, function (quiz_id) {
-      console.log("quiz_id:", quiz_id);
-      window.location.href = `/quiz/${quiz_id}`;
+      console.log("quiz_idQ:", quiz_id);
+      //once again get request sends but page does not render, have to redirect using
+      // window.location.href = `/quiz/${quiz_id}`;
     });
 
     $("#overview").submit(function (e) {
       e.preventDefault();
       const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
       console.log('quiz_id:', quiz_id)
-      $.get(`/create/${quiz_id}/complete`, function (id, quiz_Data) {
+      $.post(`/create/${quiz_id}/complete`, function (id, quiz_Data) {
         const qid= id
         console.log('qid:', qid)
         //once again get request sends but page does not render, have to redirect using
@@ -96,7 +99,8 @@ $(function () {
       $.get(`/create/`);
     });
 
-  });
     //HTML for final create page
   });
 });
+
+
