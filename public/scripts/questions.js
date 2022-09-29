@@ -48,25 +48,29 @@ $(function () {
     const quiz_id = $("#completeQuizCreate").attr("data-quiz-id");
     HTMLswapFinal(quiz_id);
 
-  //make public quiz changes status in db
-  $("#makePublic").submit(function(e) {
-    e.preventDefault();
-    $.post(`/create/${quiz_id}/complete`, function (quiz_id) {
-      console.log('quiz_id:', quiz_id)
-      window.location.href = `/quiz/${quiz_id}`
+    //make public quiz changes status in db
+    $("#makePublic").submit(function (e) {
+      e.preventDefault();
+      $.post(`/create/${quiz_id}/public`, function (quiz_id) {
+        console.log("quiz_id:", quiz_id);
+        window.location.href = `/quiz/${quiz_id}`;
+      });
     });
-  })
-});
 
-//once again get request sends but page does not render, have to redirect using
-// window.location.href = `/create/${quiz_id}/complete`
+    $("#overview").submit(function (e) {
+      e.preventDefault();
+      $.get(`/create/${quiz_id}/complete`, function (quiz_id) {
+        console.log("quiz_id:", quiz_id);
+        //once again get request sends but page does not render, have to redirect using
+        window.location.href = `/create/${quiz_id}/complete`;
+      });
+    });
+  });
 
-
-    //GET redirect for creating a new quiz
+  //GET redirect for creating a new quiz
   $("#createComplete").submit(function (e) {
     $.get(`/create/`);
   });
-
 
   //HTML for final create page
   const $finalHTML = `<section id="createComplete">
@@ -75,8 +79,11 @@ $(function () {
   <form id=" createAnother" action="/create" method="GET">
     <button class="completeButton  type="submit">Make Another!</button>
     </form>
-    <form id="makePublic" action="/create/public" method="GET">
-      <button class="completeButton type="submit">Make Public and share with friends! </button>
+    <form id="makePublic" action="/create/:id/public" method="POST">
+      <button class="completeButton" type="submit">Make Public and share with friends! </button>
+    </form>
+    <form id="overview" action="/create/:id/complete" method="GET">
+      <button class="overview" type="submit">Review your Quiz!</button>
     </form>
     </div>
     <img src="https://www.cameronaskin.info/ac8e719b3f7086bff10c0731d6d005ea.gif">
@@ -89,5 +96,4 @@ $(function () {
     $("#main").append($finalHTML);
     $("#completeQuizCreate").detach();
   };
-
 });

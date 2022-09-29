@@ -66,17 +66,17 @@ router.post("/:id", (req, res) => {
 });
 
 //Once all questions are complete
-router.post("/:id/complete", (req, res) => {
+router.post("/:id/public", (req, res) => {
   const quiz_id = req.params.id;
   // const user_id = db.quizVSuser(quiz_id)
-  // const user = req.session.user_id
+  // const userID = req.session.user_id
   // if (!user || user_id !== user){
   //   res.status(400).send(`Unable to assess quiz.    <a `Unable to assess quiz.    <a href="/">Back Home</a>`)
   // }
   db.quizVisible(quiz_id).then((quiz_id) => {
     console.log("quizid:", quiz_id);
   });
-  res.status(200).send(quiz_id);
+  res.render("quiz", {id, userID});
 });
 
 //GET overview of created quiz
@@ -89,7 +89,7 @@ router.get("/:id/complete", (req, res) => {
   // }
   db.collectForReport(id)
   .then((quizData) => {
-    res.render("create_quiz_overview", { id, quizData });
+    res.status(200).send("create_quiz_overview", { id, quizData });
   })
 });
 
