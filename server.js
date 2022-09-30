@@ -7,6 +7,8 @@ const express = require('express');
 const morgan = require('morgan');
 const cookieSession = require("cookie-session");
 
+const userQuizDB = require('./db/queries/get-user-quizzes');
+
 const PORT = process.env.PORT || 8080;
 const app = express();
 
@@ -64,7 +66,13 @@ app.use('/logout', logout);
 
 app.get('/', (req, res) => {
   const userID = req.session.user_id;
-  res.render('index', {userID});
+  userQuizDB.getUserQuizzes(userID)
+  .then(quizList => {
+    res.render('index', {userID, quizList});
+  })
+  .catch(err => {
+    console.log(err);
+  });
 });
 
 

@@ -4,24 +4,37 @@ $(document).ready(function() {
   const $hideError = $(".error");
   $hideError.hide();
 
+
+  // randomizes array
+  const randomizeArray = function(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+  }
+
   // Function creates the elements that are in .contain with the new question data
   const createQuestionElement = function(question) {
+    let array = [question.answer1, question.answer2, question.answer3, question.answer4];
+    randomizeArray(array);
     let $question = $(`
     <h2>${question.question}</h2>
     <div class="top-row-answers">
       <div class="answers">
-        <h4>A: ${question.answer1}</h4>
+        <h4>A: ${array[0]}</h4>
       </div>
       <div class="answers">
-        <h4>B: ${question.answer2}</h4>
+        <h4>B: ${array[1]}</h4>
       </div>
     </div>
     <div class="bottom-row-answers">
       <div class="answers">
-        <h4>C: ${question.answer3}</h4>
+        <h4>C: ${array[2]}</h4>
       </div>
       <div class="answers">
-        <h4>D: ${question.answer4}</h4>
+        <h4>D: ${array[3]}</h4>
       </div>
     </div>
   `);
@@ -43,6 +56,7 @@ $(document).ready(function() {
           : (percentage > 49) ? "D"
           : "F";
   }
+
 
   // deletes the old question data on the page and rerenders it with the new data
   const renderNextQuestion = function(question) {
