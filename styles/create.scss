@@ -42,8 +42,9 @@ body {
   font-family: $font;
   align-items: center;
 
-  textarea {
+  #nameText {
     @include questionTextbox;
+    background-image: linear-gradient(359deg, #2e99a8ab 11.2%, #99f8d29c 91.1%);
     height: 2.2em;
   }
 
@@ -58,30 +59,38 @@ body {
   width: 100vw;
   align-items: center;
   justify-content: center;
+
   div {
     flex-direction: column;
     margin: 1em;
     text-align: center;
+
     h2 {
       font-weight: 700;
       font-size: 1.5em;
     }
   }
+
   img {
     width: 80px;
   }
 }
 
 @media only screen and (max-width: 600px) {
+
   .createContainer {
     font-size: medium;
   }
+
   #lava {
+
     img {
       display: none;
     }
   }
+
   .quizName {
+
     textarea {
       width: 40vh;
     }

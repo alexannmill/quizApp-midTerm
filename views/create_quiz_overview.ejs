@@ -22,7 +22,8 @@
   <body>
     <main id="main">
       <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
-        <h1> <img src="https://www.cameronsworld.net/img/content/5/3.gif">Quiz Overview <img src="https://www.cameronsworld.net/img/content/5/3.gif"></h1>
+        <h1> <img src="https://www.cameronsworld.net/img/content/5/3.gif">Quiz Overview <img
+            src="https://www.cameronsworld.net/img/content/5/3.gif"></h1>
       </form>
       <section>
         <% for (let id in quizData) { %>
@@ -48,10 +49,6 @@
               <br>
               <label class="incorrectText">❌: <span>
                   <%= quizData[id].answer2 %>
-                </span></label>
-              <br>
-              <label class="incorrectText">❌: <span>
-                  <%= quizData[id].answer4 %>
                 </span></label>
               <br>
               <br>
