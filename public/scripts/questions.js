@@ -18,10 +18,12 @@ $(function () {
 
     //error handling for incorrect input
     if (!question.question || !question.correct) {
-      if (!question.answer1 || !question.answer2 || !question.answer3) {
-        alert("Plz enter a question and at least 2 answers");
-        return;
-      }
+      alert("Plz enter a question and at least 2 answers");
+      return;
+    }
+    if (!question.answer1 && !question.answer2 && !question.answer3) {
+      alert("Plz enter a question and at least 2 answers");
+      return;
     }
     //sending questions
     $.post(`/create/${quiz_id}`, question, function (data) {
