@@ -101,6 +101,7 @@ body {
   max-width: 30vw;
   min-width: 25vw;
   min-height: 4em;
+  justify-content: center;
   text-decoration: none;
   border: rgba(43, 232, 255, 0.76) 0.05em solid;
   padding: 0.25em 1em;
