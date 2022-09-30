@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-left: 0.8em;
 }
 
 .column-left {
@@ -40,9 +41,10 @@ body {
   border-radius: 0.25em;
   color: rgba(248, 43, 255, 0.76);
   font-size: 4rem;
-  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.375), 0 0 0.45em rgba(248, 43, 255, 0.76);
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.3), 0 0 0.45em rgba(248, 43, 255, 0.76);
   box-shadow: inset 0 0 0.5em 0 rgba(248, 43, 255, 0.76), 0 0 0.5em 0 rgba(248, 43, 255, 0.76);
   position: relative;
+  margin-right: 0.15em;
 }
 
 .feature-title::before {
@@ -143,7 +145,6 @@ body {
   padding-bottom: 0.4em;
 }
 
-/*  Currently commented out in html */
 /* Quizzes by Category Section */
 /* Categories Title */
 .neon-wrap {
@@ -153,7 +154,32 @@ body {
 }
 
 #category-title {
-  color: rgba(43, 232, 255, 0.76);
+  text-decoration: none;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  color: rgba(43, 255, 250, 0.87);
+  font-size: 4rem;
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.375), 0 0 0.45em rgba(43, 253, 255, 0.8);
+  position: relative;
+  margin-right: 0.15em;
+}
+
+#category-title::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: rgba(43, 253, 255, 0.7);
+  top: 88%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1.25em) rotateX(90deg) translateZ(0.12em) scale(1, 0.2);
+  filter: blur(2em);
+  opacity: 0.9;
+}
+
+#category-title:hover::after {
+  opacity: 0.7;
 }
 
 /* By Individual Category */
