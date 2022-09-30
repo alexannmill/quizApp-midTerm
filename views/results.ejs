@@ -22,8 +22,8 @@
   <%- include('./partials/_header.ejs') %>
   <div class="results-container">
     <div class="page-top">
-      <h2>Grade: <%= results[0].grade %></h2>
-      <h2>Results: <%= results[0].result %>%</h2>
+      <h2 class="<%= results[0].grade %>">Grade: <%= results[0].grade %></h2>
+      <h2 class="<%= results[0].grade %>">Results: <%= results[0].result %>%</h2>
     </div>
     <div class="gif">
       <% if (results[0].grade === "A") { %>

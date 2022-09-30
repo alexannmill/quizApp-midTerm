@@ -32,7 +32,91 @@ body {
 .page-bottom {
   align-self: flex-end;
   display: flex;
+  flex: 1;
   width: 100%;
   justify-content: space-around;
   margin-top: 25px;
+}
+
+.A {
+  @include textglow(gold);
+}
+
+.B {
+  @include textglow($purple);
+}
+
+.C {
+  @include textglow($blue);
+}
+
+.D {
+  @include textglow($green);
+}
+
+.F {
+  @include textglow(rgb(255, 63, 63));
+}
+
+@media screen and (min-width:512px) {
+
+  .page-top {
+    font-size: 2em;
+  }
+
+  .page-bottom {
+    font-size: 1.13em;
+  }
+
+
+  .gif {
+
+    img {
+      height: 13em ;
+      width: 13em;
+    }
+  }
+
+}
+
+@media screen and (min-width:768px) {
+
+  .page-top {
+    font-size: 2.5em;
+  }
+
+  .page-bottom {
+    font-size: 1.25em;
+  }
+
+
+  .gif {
+
+    img {
+      height: 15em ;
+      width: 15em;
+    }
+  }
+
+}
+
+@media screen and (min-width:1024px) {
+
+  .page-top {
+    font-size: 3em;
+  }
+
+  .page-bottom {
+    font-size: 1.5em;
+  }
+
+
+  .gif {
+
+    img {
+      height: 20em ;
+      width: 20em;
+    }
+  }
+
 }
