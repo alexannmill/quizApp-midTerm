@@ -32,7 +32,8 @@ router.post("/", (req, res) => {
 });
 
 //questions form
-router.get(`/:id`, (req, res) => {
+//GET /create/:id
+router.get("/:id", (req, res) => {
   const id = req.params.id;
   const userID = req.session.user_id;
   db.quizVSuser(id).then(function (results) {

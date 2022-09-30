@@ -6,6 +6,11 @@ body {
   justify-content: center;
   align-items: center;
   background-image: $background;
+
+  // question styler
+  h2 {
+    @include textglow($blue);
+  }
 }
 
 .error {
@@ -13,15 +18,23 @@ body {
   margin-top: 22px;
   justify-content: center;
   align-items: center;
-  @include textarea();
-  border: white solid 2px;
+  @include textglow(rgb(242, 53, 53));
+  @include borderglow(rgb(242, 53, 53));
+  border-color: rgb(239, 88, 88);
   width: 70%;
 }
 
 .next {
-  @include button();
-  padding: 20px 40px;
-  font-size: 20px;
+  @include borderglow($purple);
+  border-color: #d47efe;
+  padding: 0.25em 1em;
+  font-size: 2rem;
+  background-color: #d793f8;
+
+  &:hover {
+    @include borderglow(#88fffd);
+    background-color: #cff8f8;
+  }
 }
 
 .content {
@@ -34,14 +47,17 @@ body {
     display: flex;
     justify-content: space-between;
     @include textarea();
-    background-color: $pink;
-    border: white solid 2px;
+    background-color: #fd7ece;
+    @include borderglow($pink);
+    border-color: #fd70c9;
     padding: 10px 50px;
     width: 100%;
     word-break: break-word;
   }
 
   .answer-picked {
+    @include borderglow($green);
+    border-color: #70ff46;
     background-color: $green;
   }
 
@@ -55,7 +71,9 @@ body {
 
     .answers {
       &:hover {
-        background-color: $green;
+        @include borderglow($green);
+        border-color: #77ff4e;
+        background-color:#8aff67;
       }
     }
   }
@@ -68,9 +86,65 @@ body {
 
     .answers {
       &:hover {
-        background-color: $green;
+        @include borderglow($green);
+        border-color: #77ff4e;
+        background-color: #8aff67;
       }
     }
+  }
+
+}
+
+
+@media screen and (max-width:512px) {
+  .content {
+    font-size: 1em;
+  }
+
+  .next {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .content {
+    font-size: 0.9em;
+  }
+
+  .next {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+
+  h2 {
+    margin-top: 2.5em;
+  }
+
+  .next {
+    font-size: 2.7rem;
+  }
+
+  .content {
+
+    font-size: 1.3em;
+  }
+
+}
+
+@media screen and (min-width:1024px) {
+
+  h2 {
+    margin-top: 5em;
+  }
+  .next {
+    font-size: 3rem;
+  }
+
+  .content {
+
+    font-size: 1.5em;
   }
 
 }
