@@ -88,10 +88,6 @@
   display: flex;
 }
 
-#results-item {
-  display: flex;
-}
-
 @media only screen and (max-width: 600px) {
   .navbar {
     font-size: 1.5em;
@@ -118,5 +114,14 @@
       justify-content: space-between;
       font-size: small;
     }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  #create-item {
+    @include headerpages();
+  }
+  #results-item {
+    @include headerpages();
   }
 }
