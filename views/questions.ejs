@@ -27,8 +27,8 @@
       <form id="completeQuizCreate" data-quiz-id="<%=id%>" action="/create/<%=id%>/complete" method="POST">
         <button type="submit">Generate Quiz</button>
       </form>
-      <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
-        <section id="creationQnA">
+      <section id="creationQnA">
+        <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
           <div class="questionContainer">
             <label>Question:</label>
             <textarea name="question"></textarea>
@@ -44,15 +44,15 @@
             </div>
             <div>
               <label>Answer 2:</label>
-              <textarea name="answer3"></textarea>
+              <textarea name="answer2"></textarea>
             </div>
             <div>
               <label>Answer 3:</label>
-              <textarea name="answer2"></textarea>
+              <textarea name="answer3"></textarea>
             </div>
             <button type="submit">Next </button>
           </section>
-      </form>
+        </form>
       </section>
     </main>
   </body>

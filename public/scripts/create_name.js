@@ -1,20 +1,17 @@
 $(function () {
-  $(".quizName").submit(function (e) {
+  //start after name entered
+  $(".quizName").submit(function(e) {
     e.preventDefault();
-    const name = {}
-    name.name=$("#nameText").val()
-    console.log('name:', name)
+    const name = {};
+    name.name = $("#nameText").val();
     if (!name.name) {
-      alert("Plz enter a name")
+      alert("Plz enter a name");
       return;
     }
-
-    $.post(`/create`, name, function(response) {
-      const id = response.id
-      console.log('id:', id)
-      // unable to redirect or get was causing error so used window.loc
-      window.location.href = `/create/${id}`
+    $.post(`/create`, name, function (response) {
+      const id = response.id;
+      // unable to redirect/render w express causing error so used window.loc
+      window.location.href = `/create/${id}`;
     });
-  })
-})
-
+  });
+});

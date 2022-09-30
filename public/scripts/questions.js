@@ -15,13 +15,11 @@ $(function () {
     question.answer2 = $(this).find('textarea[name="answer2"]').val();
     question.answer3 = $(this).find('textarea[name="answer3"]').val();
     question.answer4 = question.correct;
-
+    console.log("question:", question);
     //error handling for incorrect input
-    if (!question.question || !question.correct) {
-      if (!question.answer1 || !question.answer2 || !question.answer3) {
-        alert("Plz enter a question and at least 2 answers");
-        return;
-      }
+    if (!question.question || !question.correct || !question.answer1) {
+      alert("Plz enter a question and at least 2 answers");
+      return;
     }
     //sending questions
     $.post(`/create/${quiz_id}`, question, function (data) {
@@ -37,19 +35,19 @@ $(function () {
   //func for dropping qNa text form for final page
   const HTMLswapFinal = (quiz_id) => {
     const $finalHTML = `<section id="createComplete">
-    <h1> Your Quiz is Complete!</h1>
-    <div>
-    <form id=" createAnother" action="/create" method="GET">
-    <button class="completeButton  type="submit">Make Another!</button>
-    </form>
-    <form id="makePublic" action="/create/${quiz_id}/public" method="POST">
-    <button class="completeButton" type="submit">Make Public and share with friends! </button>
-    </form>
-    <form id="overview" action="/create/${quiz_id}/complete" method="GET">
-    <button class="completeButton" type="submit">Review your Quiz!</button>
-    </form>
-    </div>
-    <img src="https://www.cameronaskin.info/ac8e719b3f7086bff10c0731d6d005ea.gif">
+      <h1> Your Quiz is Complete!</h1>
+      <div>
+        <form id=" createAnother" action="/create" method="GET">
+          <button class="completeButton  type="submit">Make Another!</button>
+        </form>
+        <form id="makePublic" action="/create/${quiz_id}/public" method="POST">
+          <button class="completeButton" type="submit">Make Public and share with friends! </button>
+        </form>
+        <form id="overview" action="/create/${quiz_id}/complete" method="GET">
+          <button class="completeButton" type="submit">Review your Quiz!</button>
+        </form>
+      </div>
+      <img src="https://www.cameronaskin.info/ac8e719b3f7086bff10c0731d6d005ea.gif">
     </section>`;
 
     $("#creationQnA").detach();

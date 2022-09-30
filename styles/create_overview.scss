@@ -8,6 +8,7 @@ body {
   @include flexcenter();
   flex-direction: column;
   text-align: center;
+
   h1 {
     display: flex;
     align-items: center;
@@ -15,10 +16,21 @@ body {
   }
 }
 
-#correctText {
-  color: $green;
+.questionContainer {
+  font-size: 1.5em;
+
+  #correctText {
+    color: $green;
+  }
+
+  .incorrectText {
+    color: $pink;
+  }
 }
 
-.incorrectText {
-  color: $pink;
+#questionform {
+  img {
+    margin-inline: 2em;
+  }
 }
+
