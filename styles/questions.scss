@@ -6,36 +6,40 @@ body {
 
 #main {
   @include flexcenter();
-  // flex-direction: column;
-  width: 100vw;
 }
 
 .questionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em;
-  color: $purple;
-  // width: 100vw;
+  margin: 1em;
+  color: #fa1fe7f6;
+  text-shadow: 0 0 0.12em rgb(255 255 255 / 29%), 0 0 0.45em rgb(73, 52, 74);
+  font-weight: 700;
   textarea {
-    @include textarea();
-    width: 20em;
+    @include questionTextbox();
+    height: 2.2em;
+    padding: 0.2em;
+    font-size: 1.5em;
   }
   label {
     align-self: center;
+    font-size: 1.4em;
     padding: 1em;
-    font-size: large;
   }
 }
 
 #answerContainer {
+  font-family: "Oxygen", sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  color: $pink;
-  // width: 100vw;
+  flex-direction: column;
+  color: #fa1fe7f6;
+  text-shadow: 0 0 0.12em rgb(255 255 255 / 29%), 0 0 0.45em rgb(73, 52, 74);
+  font-weight: 700;
   label {
     padding: 1em;
+    font-size: 1.4em;
   }
   div {
     display: flex;
@@ -43,15 +47,13 @@ body {
   }
   button {
     @include button();
-    width: 5em;
-    margin: 0.5em;
+    width: 8em;
+    height: 2em;
   }
   textarea {
-    @include textarea;
-    width: 12em;
-  }
-  label {
-    font-size: large;
+    @include questionTextbox;
+    height: 2.2em;
+    padding: 0.2em;
   }
 }
 
@@ -64,9 +66,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1em;
   button {
-    @include button();
-    background-color: $green;
+    width: 8em;
+    height: 3em;
+    border-radius: 6px;
+    background: none;
+    font-size: 1.2em;
+    text-shadow: 0 0 0.125em rgb(255 255 255 / 29%), 0 0 0.45em rgb(233 152 236 / 85%);
+    color: rgb(13 12 13 / 82%);
+    box-shadow: inset 0 0 0.5em 0 rgb(175 190 176 / 76%), 0 0 0.5em 0 rgb(213 160 240 / 82%);
+    background-color: #6bf442;
     padding: 0.5em;
   }
 }
@@ -77,15 +87,40 @@ body {
   h1 {
     color: $blue;
     margin: 1em;
+    text-align: center;
   }
   div {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .completeButton {
     @include button();
     width: 12em;
-    margin: 2em;
-    padding: 0.3em;
+    margin: 1em;
+    height: 4.5em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .questionContainer {
+    label {
+      font-size: 1em;
+    }
+  }
+  #createComplete {
+    div {
+      flex-direction: column;
+    }
+  }
+  #answerContainer {
+    label {
+      font-size: 1em;
+    }
+  }
+  .completeButton {
+    height: 2em;
+    font-size: 1em;
   }
 }

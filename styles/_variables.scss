@@ -1,19 +1,34 @@
-
-$font:'Oxygen', sans-serif;
-$logo:'Stalinist One', cursive;
+$font: "Oxygen", sans-serif;
+$logo: "Stalinist One", cursive;
 $background: url(https://www.cameronsworld.net/img/content/20/bg.png);
-$pink:  #ff5dc3;
-$purple:  #cd68ff;
-$blue:  #9afffd;
+$pink: #ff5dc3;
+$purple: #cd68ff;
+$blue: #9afffd;
 $green: #70ff46;
 
 @mixin textarea() {
-  margin-bottom: 0.5em;
-  resize: none;
-  background-color: #7dfffd;
-  color: black;
+  display: flex;
+  top: 0px;
+  position: relative;
   text-align: center;
-  border-radius: 5px;
+  width: 40vw;
+  font-size: 1.5em;
+  background-color: #00daded5;
+  background-image: linear-gradient(358deg, #3199b5 0%, #99fae2 100%);
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+  resize: none;
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+    top: -4px;
+    border: 1px solid #cccccc;
+  }
 }
 
 @mixin flexcenter() {
@@ -22,11 +37,46 @@ $green: #70ff46;
   justify-content: center;
 }
 
-  @mixin button() {
-  font-weight: 400;
-  color: black ;
-  background-color:$purple;
-  border-radius: 5px;
+@mixin button() {
+  width: 4.5em;
+  height: 1.5em;
+  border-radius: 6px;
+  background: none;
+  font-size: 1.2em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.29),
+    0 0 0.45em rgba(248, 43, 255, 0.76);
+  color: rgb(252 74 230 / 82%);
+  box-shadow: inset 0 0 0.5em 0 rgb(74 84 74 / 76%),
+    0 0 0.5em 0 rgba(28, 255, 251, 0.883);
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+    top: -4px;
+    border: 3px solid #cccccc;
+  }
 }
 
-
+@mixin questionTextbox {
+  display: flex;
+  top: 0px;
+  position: relative;
+  text-align: center;
+  width: 40vw;
+  font-size: 1.5em;
+  background-color: #00daded5;
+  background-image: linear-gradient(358deg, #3199b5 0%, #99fae2 100%);
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+  resize: none;
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+    top: -4px;
+    border: 1px solid #cccccc;
+  }
+}

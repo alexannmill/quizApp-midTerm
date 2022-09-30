@@ -23,31 +23,38 @@
   <script src="scripts/create_name.js"></script>
 </head>
 
-  <body>
+<body>
   <%- include('partials/_header.ejs') %>
-  <section class="createContainer">
-    <h1>Create a Quiz!</h1>
-    <div id="text">
-      <p>Instructions:</p>
-      <ul>
-        <li>Every quiz must have a name.</li>
-        <li>You must have the question, correct <br> answer and one other answer.</li>
-        <li>Every quiz must have at least 3 questions.</li>
-      </ul>
-    </div>
-    <div id="lava">
-      <img src="https://www.cameronsworld.net/img/content/16/6.gif">
-      <div>
-    <h3>Enter a Quiz Name : </h3>
-    <form class="quizName" action="/create" method="POST">
-      <textarea class="form-control form-control-lg" name="name" id="nameText"></textarea>
-      <button class="btn btn-info" type="submit">Start</button>
-    </form>
-  </div>
-    <img src="https://www.cameronsworld.net/img/content/16/6.gif">
-  </div>
-  </section>
+    <section class="createContainer">
+      <div id="title">
+        <h1>Create a Quiz!</h1>
+      </div>
+      <div id="text">
+        <ul>
+          <h3>Instructions:</h3>
+          <li>👾 Every quiz must have a name.</li>
+          <br>
+          <li>👾 Every quiz must have a question,
+            <br>one correct answer, and at least
+            <br> one incorrect answer choice.
+          </li>
+          <br>
+          <li>👾 Every quiz must have at least 3 questions.</li>
+        </ul>
+      </div>
+      <div id="lava">
+        <img src="https://www.cameronsworld.net/img/content/16/6.gif">
+        <div>
+          <h2>Enter a Quiz Name : </h2>
+          <form class="quizName" action="/create" method="POST">
+            <textarea class="form-control form-control-lg" name="name" id="nameText"></textarea>
+            <button class="btn btn-info" type="submit">Start</button>
+          </form>
+        </div>
+        <img src="https://www.cameronsworld.net/img/content/16/6.gif">
+      </div>
+    </section>
 
-  </body>
+</body>
 
 </html>

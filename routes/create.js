@@ -4,8 +4,7 @@ const router = express.Router();
 //db connection
 const db = require("../db/queries/create");
 
-//page for making quiz
-//GET /create/
+//create page login required name form
 router.get("/", (req, res) => {
   const userID = req.session.user_id;
   if (!userID) {
@@ -33,7 +32,6 @@ router.post("/", (req, res) => {
 });
 
 //questions form
-//GET /create/:id
 router.get(`/:id`, (req, res) => {
   const id = req.params.id;
   const userID = req.session.user_id;
@@ -69,7 +67,7 @@ router.post("/:id", (req, res) => {
     });
 });
 
-//GET overview of created quiz
+//quiz overview
 router.get("/:id/complete", (req, res) => {
   const id = req.params.id;
   const userID = req.session.user_id;
@@ -80,20 +78,19 @@ router.get("/:id/complete", (req, res) => {
         .send(`Unable to assess quiz.    <a href="/">Back Home</a>`);
       return;
     }
+    //collecting questions from database and render quiz overview
     db.collectForReport(id)
-    .then((quizData) => {
-      const quiz_Data = quizData;
-      console.log("quiz_Data:", quiz_Data);
-      res.render("create_quiz_overview", { id, userID, quizData });
-    })
-    .catch((err) => {
-      res.status(500).send();
-      console.log(err);
-    });
-  })
+      .then((quizData) => {
+        res.render("create_quiz_overview", { id, userID, quizData });
+      })
+      .catch((err) => {
+        res.status(500).send();
+        console.log(err);
+      });
+  });
 });
 
-//Once all questions are complete
+//changes permissions and redirect to quiz
 router.post("/:id/public", (req, res) => {
   const id = req.params.id;
   const userID = req.session.user_id;
