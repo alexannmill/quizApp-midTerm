@@ -1,53 +1,83 @@
 @import "./_variables.scss";
 
 .navbar {
+  font-size: 1.5em;
   display: flex;
   justify-content: space-between;
   width: 100vw;
   background-image: linear-gradient(
     to top,
-    #0d1d3570 0%,
+    #050b154c 0%,
     #f970b7,
     #c653ff 100%
   );
-  height: 10em;
+  height: 9em;
   align-items: center;
   font-family: $font;
   color: white;
   padding: 1em;
   a {
-    color: black;
     text-decoration: none;
   }
 }
 
 .navbar-brand {
-  font-size: xx-large;
-  font: $logo;
-  background-image: url();
+  height: 5em;
+  font-weight: bold;
+  width: 5em;
   text-align: center;
+  text-decoration: none;
+  border: rgba(56, 7, 250, 0.76) 0.2em solid;
+  padding: 1em;
+  border-radius: 4em;
+  color: rgba(0, 242, 251, 0.72);
+  text-shadow: 0 0 0.125em rgb(255 255 255 / 29%),
+    0 0 0.45em rgb(43 117 255 / 76%);
+  box-shadow: inset 0 0 0.5em 0 rgb(43 96 255 / 76%),
+    0 0 0.5em 0 rgb(43 211 255 / 76%);
+  position: relative;
 }
 
 .logReg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
 
   textarea {
     @include textarea();
     height: 2em;
-    font-size: small;
+    font-size: medium;
+    width: 15em;
   }
   .buttons {
     display: flex;
     justify-content: space-between;
+    font-size: medium;
+  }
+  .login, .register {
+    @include button();
+    width: 6em;
+    height: 2em;
   }
 }
+.logout {
+  @include button();
+  color: black;
+  text-align: center;
+  display: flex;
+  font-size: medium;
+  padding-inline: 3em;
+  height: 2.5em;
+  align-items: center;
+  width: 10em;
+}
+
 #navbar-paths {
   display: flex;
-  width: 40%;
+  width: 40vw;
   justify-content: space-evenly;
-  font-size: large;
+  color: black;
 }
 
 #create-item {
@@ -62,3 +92,31 @@
   display: flex;
 }
 
+@media only screen and (max-width: 600px) {
+  .navbar {
+    font-size: 1.5em;
+  }
+  .navbar-items {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .logReg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    textarea {
+      @include textarea();
+      height: 1em;
+      width: 20vw;
+      font-size: small;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      font-size: small;
+    }
+  }
+}

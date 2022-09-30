@@ -113,11 +113,9 @@ const collectForReport = (id) => {
       WHERE quiz_id = $1
       `,
       [id]
-
     )
     .then((result) => {
-      const quizData = result.rows;
-      console.log('quizDataQ:', quizData)
+      const quizData = result.rows
       return quizData;
     });
 };
