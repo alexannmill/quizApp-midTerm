@@ -24,15 +24,16 @@
   </header>
   <body>
     <main>
+      <!--
       <div id="daily-title">
        <h1>Quizzes of the Day</h1>
       </div>
-
+    -->
       <section id="featured">
         <div class="column-left">
           <div class="featured-quiz">
             <div class="featured-large">
-              <span class="feature-title">Featured Quiz</span>
+              <span class="feature-title">Quizz App</span>
             </div>
             <div class="featured-medium" id="row-1">
               <span>Featured Quiz 1</span>
@@ -49,35 +50,6 @@
           </div>
         </div>
       </section>
-
-      <!--
-      <section id="tables-container">
-        <div class="column-right">
-
-          <div class="column-container" id="popular-section">
-            <h3>Most Popular</h3>
-            <ol class="column-list">
-              <li>Popular 1</li>
-              <li>Popular 2</li>
-              <li>Popular 3</li>
-              <li>Popular 4</li>
-              <li>Popular 5</li>
-            </ol>
-          </div>
-
-          <div class="column-container" id="for-you-section">
-            <h3>Made By You</h3>
-            <ul class="column-list">
-              <li>By You 2</li>
-              <li>By You 2</li>
-              <li>By You 3</li>
-              <li>By You 4</li>
-              <li>By You 5</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    -->
       <section id="main-section">
         <div class="neon-wrap">
           <h1 id="category-title">Categories<h1>
@@ -163,9 +135,20 @@
           </div>
         </div>
       </section>
-      <section class="trying-stuff">
-
-
+      <section class="user-created" id="tables-container">
+        <% if(userID){ %>
+        <h3>Made By You</h3>
+        <div class="column-right">
+          <div class="column-container" id="for-you-section">
+            <ul class="column-list">
+            <% for (let element of quizList) { %>
+              <a href="/quiz/<%= element.id %>" ><li><%= element.name %> </li></a>
+            <%} %>
+          </ul>
+           <%} %>
+          </div>
+        </div>
+      </section>
       </section>
     </main>
   </body>
