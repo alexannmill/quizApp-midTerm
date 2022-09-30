@@ -14,14 +14,14 @@ $(function () {
   question.answer1 = $(this).find('textarea[name="answer1"]').val();
   question.answer2 = $(this).find('textarea[name="answer2"]').val();
   question.answer3 = $(this).find('textarea[name="answer3"]').val();
-  question.answer4 = $(this).find('textarea[name="answer4"]').val();
+
 //error handling for incorrect input
   if (!question.question || !question.correct) {
     if (
       !question.answer1 ||
       !question.answer2 ||
-      !question.answer3 ||
-      !question.answer4
+      !question.answer3
+
     ) {
       alert("Plz enter a question and at least 2 answers");
       return;
