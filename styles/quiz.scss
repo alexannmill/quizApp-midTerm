@@ -26,7 +26,7 @@ body {
 
 .next {
   @include borderglow($purple);
-  border-color: #d47efe;
+  border-color: #d277ff;
   padding: 0.25em 1em;
   font-size: 2rem;
   background-color: #d793f8;
@@ -49,7 +49,7 @@ body {
     @include textarea();
     background-color: #fd7ece;
     @include borderglow($pink);
-    border-color: #fd70c9;
+    border-color: #ff6cc9;
     padding: 10px 50px;
     width: 100%;
     word-break: break-word;
@@ -136,7 +136,7 @@ body {
 @media screen and (min-width:1024px) {
 
   h2 {
-    margin-top: 5em;
+    margin-top: 3em;
   }
   .next {
     font-size: 3rem;
@@ -144,6 +144,10 @@ body {
 
   .content {
 
+    font-size: 1.5em;
+  }
+
+  .error {
     font-size: 1.5em;
   }
 
