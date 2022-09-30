@@ -205,7 +205,11 @@ body {
 }
 
 
+
+
 /* Quizzes by Category Section */
+
+
 
 
 /* Categories Title */
@@ -290,6 +294,7 @@ h3 {
   min-width: 25vw;
   min-height: 4em;
   margin-bottom: 1.5em;
+  justify-content: center;
 
 
   position: relative;
@@ -328,6 +333,12 @@ h3 {
   0 0 0.5em 0 rgba(43, 131, 255, 0.77);
 }
 
+#science-title {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 
 
@@ -346,6 +357,10 @@ h3 {
   0 0 0.5em 0 rgba(43, 131, 255, 0.77);
 }
 
+#geography-title {
+  display: flex;
+  justify-content: center;
+}
 
 
 #film-row-1 span, #film-row-2 span, #film-row-3 span {
@@ -363,6 +378,13 @@ h3 {
   0 0 0.5em 0 rgba(43, 131, 255, 0.77);
 }
 
+
+#film-title {
+  display: flex;
+  justify-content: center;
+}
+
+
 #history-row-1 span, #history-row-2 span, #history-row-3 span {
   text-decoration: none;
   border:rgba(43, 232, 255, .76) .05em solid;
@@ -379,6 +401,12 @@ h3 {
 
 }
 
+#history-title {
+  display: flex;
+  justify-content: center;
+}
+
+
 #general-row-1 span, #general-row-2 span, #general-row-3 span {
   text-decoration: none;
   border:rgba(43, 232, 255, .76) .05em solid;
@@ -394,7 +422,27 @@ h3 {
   0 0 0.5em 0 rgba(43, 131, 255, 0.77);
 }
 
+#general-title {
+  display: flex;
+  justify-content: center;
+}
 
+
+
+
+
+
+
+#for-you-section{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+#tree-animation {
+  display: flex;
+}
 
 
 

@@ -56,7 +56,7 @@
         </div>
 
         <div class="science-container">
-          <h3>Science & Nature</h3>
+          <h3 id="science-title">🌲&nbsp; Science & Nature &nbsp;🌲</h3>
           <div class="quizzes" id="science-row-1">
             <a href="/quiz/1"><span>Science Moderate 1</span></a>
             <a href="/quiz/2"><span>Science Moderate 2</span></a>
@@ -72,7 +72,7 @@
         </div>
 
         <div class="geography-container">
-          <h3>Geography</h3>
+          <h3 id="geography-title" >🌎&nbsp; Geography &nbsp;🌎</h3>
           <div class="quizzes" id="geography-row-1">
             <a href="/quiz/7"><span>Geography Moderate 1</span></a>
             <a href="/quiz/8"><span>Geography Moderate 2</span></a>
@@ -88,7 +88,7 @@
         </div>
 
         <div class="film-container">
-          <h3>Film</h3>
+          <h3 id="film-title">🎞&nbsp; Film &nbsp;🎞</h3>
           <div class="quizzes" id="film-row-1">
             <a href="/quiz/13"><span>Film Moderate 1</span></a>
             <a href="/quiz/14"><span>Film Moderate 2</span></a>
@@ -104,7 +104,7 @@
         </div>
 
         <div class="history-container">
-          <h3>History</h3>
+          <h3 id="history-title">⌛&nbsp; History &nbsp;⌛</h3>
           <div class="quizzes" id="history-row-1">
             <a href="/quiz/19"><span>History Moderate 1</span></a>
             <a href="/quiz/20"><span>History Moderate 2</span></a>
@@ -120,7 +120,7 @@
         </div>
 
         <div class="general-container">
-          <h3>General Knowledge</h3>
+          <h3 id="general-title">🎓&nbsp; General Knowledge &nbsp;🎓</h3>
           <div class="quizzes" id="general-row-1">
             <a href="/quiz/25"><span>General Moderate 1</span></a>
             <a href="/quiz/26"><span>General Moderate 2</span></a>
@@ -137,9 +137,9 @@
       </section>
       <section class="user-created" id="tables-container">
         <% if(userID){ %>
-        <h3>Made By You</h3>
+        <h3 id="for-you-section">Made By You</h3>
         <div class="column-right">
-          <div class="column-container" id="for-you-section">
+          <div class="column-container">
             <ul class="column-list">
             <% for (let element of quizList) { %>
               <a href="/quiz/<%= element.id %>" ><li><%= element.name %> </li></a>
