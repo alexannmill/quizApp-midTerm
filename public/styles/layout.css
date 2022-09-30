@@ -56,7 +56,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: perspective(1.25em) rotateX(40deg) translateZ(0.2em) scale(1, 0.2);
+  transform: perspective(1.25em) rotateX(40deg) translateZ(0.3em) scale(1, 0.2);
   filter: blur(2em);
   opacity: 0.9;
 }
@@ -229,6 +229,7 @@ h3 {
 #science-title {
   display: flex;
   justify-content: center;
+  color: rgba(43, 255, 76, 0.8);
 }
 
 #geography-row-1 span, #geography-row-2 span, #geography-row-3 span {
@@ -245,6 +246,7 @@ h3 {
 #geography-title {
   display: flex;
   justify-content: center;
+  color: #2b83ff;
 }
 
 #film-row-1 span, #film-row-2 span, #film-row-3 span {
@@ -261,6 +263,7 @@ h3 {
 #film-title {
   display: flex;
   justify-content: center;
+  color: #dca00a;
 }
 
 #history-row-1 span, #history-row-2 span, #history-row-3 span {
@@ -277,6 +280,7 @@ h3 {
 #history-title {
   display: flex;
   justify-content: center;
+  color: #0ad1d2;
 }
 
 #general-row-1 span, #general-row-2 span, #general-row-3 span {
@@ -293,15 +297,24 @@ h3 {
 #general-title {
   display: flex;
   justify-content: center;
+  color: white;
 }
 
 #for-you-section {
   display: flex;
   justify-content: center;
+  color: #2fc4ff;
+  text-shadow: rgba(43, 255, 250, 0.87);
 }
 
-#tree-animation {
-  display: flex;
+#bottom-box {
+  min-width: 30vw;
 }
 
-/* Trying stuff */
+#bottom-box li {
+  color: white;
+}
+
+#bottom-box li:hover {
+  color: rgba(248, 43, 255, 0.76);
+}

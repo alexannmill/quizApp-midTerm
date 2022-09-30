@@ -35,18 +35,21 @@
             <div class="featured-large">
               <span class="feature-title">Quizz App</span>
             </div>
+            <!--
             <div class="featured-medium" id="row-1">
-              <span>Featured Quiz 1</span>
-              <span>Featured Quiz 2</span>
+              <span>🌲🌲🌲</span>
+              <span>🌎🌎🌎</span>
             </div>
             <div class="featured-medium" id="row-2">
-              <span>Featured Quiz 3</span>
-              <span>Featured Quiz 4</span>
+              <span>🎞🎞🎞</span>
+              <span>⌛⌛⌛</span>
             </div>
             <div class="featured-medium" id="row-3">
-              <span>Featured Quiz 5</span>
+              <span>🎓🎓🎓</span>
               <span>Featured Quiz 6</span>
             </div>
+          -->
+
           </div>
         </div>
       </section>
@@ -137,9 +140,9 @@
       </section>
       <section class="user-created" id="tables-container">
         <% if(userID){ %>
-        <h3 id="for-you-section">Made By You</h3>
+        <h3 id="for-you-section">Created by you!</h3>
         <div class="column-right">
-          <div class="column-container">
+          <div class="column-container" id="bottom-box">
             <ul class="column-list">
             <% for (let element of quizList) { %>
               <a href="/quiz/<%= element.id %>" ><li><%= element.name %> </li></a>
