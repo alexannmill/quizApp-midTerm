@@ -31,22 +31,22 @@
 
   <!-- Content -->
   <% if (userID) { %>
-  <div class="content" quiz-id="<%= results.quiz_id %>" user-id="<%= userID %>">
-    <h2><%= results.question %></h2>
+  <div class="content" quiz-id="<%= quiz_id %>" user-id="<%= userID %>">
+    <h2><%= question %></h2>
     <div class="top-row-answers">
       <div class="answers">
-        <h4>A: <%= results.answer1 %></h4>
+        <h4>A: <%= answers[0] %></h4>
       </div>
       <div class="answers">
-        <h4>B: <%= results.answer2 %></h4>
+        <h4>B: <%= answers[1] %></h4>
       </div>
     </div>
     <div class="bottom-row-answers">
       <div class="answers">
-        <h4>C: <%= results.answer3 %></h4>
+        <h4>C: <%= answers[2] %></h4>
       </div>
       <div class="answers">
-        <h4>D: <%= results.answer4 %></h4>
+        <h4>D: <%= answers[3] %></h4>
       </div>
     </div>
   </div>
