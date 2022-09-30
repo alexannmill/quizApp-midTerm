@@ -12,7 +12,14 @@ router.get('/:id', (req, res) => {
     if (results.length === 0) {
       return res.status(400).send(`This result does not exist :(   <a href="/">Back Home</a>`);
     }
-    res.render('quiz', {results:results[0], userID});
+    const answers = [results[0].answer1, results[0].answer2, results[0].answer3, results[0].answer4];
+    for (let i = answers.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = answers[i];
+      answers[i] = answers[j];
+      answers[j] = temp;
+    }
+    res.render('quiz', {answers, userID, question:results[0].question, quiz_id:results[0].quiz_id});
   });
 });
 

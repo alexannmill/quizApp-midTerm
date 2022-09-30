@@ -115,7 +115,7 @@ const collectForReport = (id) => {
       [id]
     )
     .then((result) => {
-      const quizData = result.rows
+      const quizData = result.rows;
       return quizData;
     });
 };

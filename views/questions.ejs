@@ -27,36 +27,32 @@
       <form id="completeQuizCreate" data-quiz-id="<%=id%>" action="/create/<%=id%>/complete" method="POST">
         <button type="submit">Generate Quiz</button>
       </form>
-      <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
-        <section id="creationQnA">
+      <section id="creationQnA">
+        <form data-quiz-id="<%=id%>" id="questionform" action="/routes/create.js" method="post">
           <div class="questionContainer">
             <label>Question:</label>
             <textarea name="question"></textarea>
           </div>
           <section id="answerContainer">
             <div id="correct">
-              <label>Correct Answer:</label>
+              <label>Correct:</label>
               <textarea name="correct"></textarea>
             </div>
             <div>
-              <label>Incorrect Answer:</label>
+              <label>Answer 1:</label>
               <textarea name="answer1"></textarea>
             </div>
             <div>
-              <label>Incorrect Answer:</label>
-              <textarea name="answer3"></textarea>
-            </div>
-            <div>
-              <label>Incorrect Answer:</label>
+              <label>Answer 2:</label>
               <textarea name="answer2"></textarea>
             </div>
             <div>
-              <label>Incorrect Answer:</label>
-              <textarea name="answer4"></textarea>
+              <label>Answer 3:</label>
+              <textarea name="answer3"></textarea>
             </div>
             <button type="submit">Next </button>
           </section>
-      </form>
+        </form>
       </section>
     </main>
   </body>
